@@ -1,0 +1,21 @@
+{
+    "author": "Mladen Gibanica",
+    "sitename": "mladen.gibanica.net",
+    "siteurl": "https://mladen.gibanica.net",
+    "template_path": "../../",
+    "site_path": "site",
+    "timezone": "Europe/Stockholm",
+    "default_lang": "en-gb",
+    "content": "content",
+    "templates": "templates",
+    "output": "output",
+    "indexhtml": "index.html",
+    "home": "home",
+    "archive": "archive",
+    "menuitems": {
+        "home": "",
+        "archive": "archive"
+    },
+    "posturl": "{{posturl}}",
+    "small_image_height": 300
+}
