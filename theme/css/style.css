@@ -1136,56 +1136,6 @@ p a:hover {
 }
 /* End Print */
 
-/* Custom fonts */
-@font-face {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url('fonts/LatoLatin-Regular.woff2') format('woff2'),
-         url('fonts/LatoLatin-Regular.woff') format('woff');
-
-}
-
-@font-face {
-    font-family: Lato;
-    font-style: italic;
-    font-weight: normal;
-    font-display: swap;
-    src: url('fonts/LatoLatin-Italic.woff2') format('woff2'),
-         url('fonts/LatoLatin-Italic.woff') format('woff');
-
-}
-
-@font-face {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: bold;
-    font-display: swap;
-    src: url('fonts/LatoLatin-Medium.woff2') format('woff2'),
-         url('fonts/LatoLatin-Medium.woff') format('woff');
-
-}
-
-@font-face {
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 100;
-    font-display: swap;
-    src: url('fonts/LatoLatin-Light.woff2') format('woff2'),
-         url('fonts/LatoLatin-Light.woff') format('woff');
-
-}
-
-@font-face {
-    font-family: Inconsolata;
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url('fonts/Inconsolata-Regular.otf');
-}
-/* End Custom fonts */
-
 /* Prism Style (use of !important to overide default style ) */
 pre {
   /*background-color: rgba(245,242,240,0.8) !important;*/
