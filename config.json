@@ -2,7 +2,7 @@
     "author": "Mladen Gibanica",
     "sitename": "mladen.gibanica.net",
     "siteurl": "https://mladen.gibanica.net",
-    "template_path": "/mysgen/",
+    "template_path": "theme/",
     "site_path": "site",
     "timezone": "Europe/Stockholm",
     "default_lang": "en-gb",
