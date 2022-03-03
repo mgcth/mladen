@@ -1210,6 +1210,7 @@ p > code {
 
 code[class*="language-"] {
   font-family: myInconsolata, "Lucida Console", Monaco, monospace !important;
+  white-space: pre-wrap;
 }
 
 .code_inline {
