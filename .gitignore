@@ -150,8 +150,8 @@ dmypy.json
 .pyre/
 
 # media files
-*.mp4
-*.gif
-*.jpg
-*.jpge
-*.png
+#*.mp4
+#*.gif
+#*.jpg
+#*.jpeg
+#*.png
