@@ -113,7 +113,7 @@ a:hover {
 
 /* Headlines */
 h1, h2, h3, h4, h5, h6 {
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   /* text-transform: uppercase; */
   margin: 10px 0;
   letter-spacing: 0.1em;
@@ -197,7 +197,7 @@ body {
   margin: 0;
   padding: 0;
   color: #000;
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   font-style: normal;
   font-weight: 100;
   font-size: 75%; /* Reset to 12px from the usual 16px */
@@ -206,7 +206,7 @@ body {
 
 /* Menu */
 #nav {
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   position: fixed;
   text-transform: uppercase;
   z-index: 1;
@@ -327,7 +327,7 @@ body {
   /*hyphens: auto;
   hyphenate-limit-lines: 2;
   hyphenate-limit-chars: 6 3 2;*/
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
 }
 
 .main .page {
@@ -399,7 +399,7 @@ body {
 
 /* Tiles */
 .main .hentry {
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   /* font-weight: 200; */
   margin: 0 auto;
   padding: 10px 0;
@@ -463,7 +463,7 @@ body {
 }
 
 .main .article .article_header_footer {
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   background: rgba(240,240,240,0.8);
   padding: 20px;
 }
@@ -483,7 +483,7 @@ body {
 }
 
 .main .entry-content-page-title {
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   margin: 50px auto 0;
   padding: 0 40px;
   min-width: 160px;
@@ -532,7 +532,7 @@ p a:hover {
 }
 
 .main .article .published, .main .article .posted_in, .main .article .modified {
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   /* font-size: 1.6em; */
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -576,7 +576,7 @@ p a:hover {
 }
 
 .main #post-list .published {
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   /* font-size: 1.6em; */
   /* font-weight: 200; */
   text-transform: uppercase;
@@ -586,7 +586,7 @@ p a:hover {
 }
 
 .main #post-list .posted_in {
-  font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+  font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   font-size: 1.6em;
   text-transform: uppercase;
   position: absolute;
@@ -725,7 +725,7 @@ p a:hover {
   }
 
   ul.unordered-list {
-    font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+    font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
     font-size: 1.8em;
     list-style: none;
     margin: 80px auto 0;
@@ -761,7 +761,7 @@ p a:hover {
   }
 
   dl {
-    font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+    font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
     text-align: left;
     margin: 80px auto 0;
   }
@@ -815,7 +815,7 @@ p a:hover {
 
   /*.list-style-tiles[data-list]::after {
     content: attr(data-list);
-    font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+    font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
     position: absolute;
     color: #000000;
     text-transform: uppercase;
@@ -877,7 +877,7 @@ p a:hover {
     position: absolute;
     text-transform: uppercase;
     z-index: 1;
-    font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
+    font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
     font-size: 1.4em;
     top: -80px;
     right: 40px;
@@ -1136,62 +1136,12 @@ p a:hover {
 }
 /* End Print */
 
-/* Custom fonts */
-@font-face {
-    font-family: myLato;
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url('fonts/LatoLatin-Regular.woff2') format('woff2'),
-         url('fonts/LatoLatin-Regular.woff') format('woff');
-
-}
-
-@font-face {
-    font-family: myLato;
-    font-style: italic;
-    font-weight: normal;
-    font-display: swap;
-    src: url('fonts/LatoLatin-Italic.woff2') format('woff2'),
-         url('fonts/LatoLatin-Italic.woff') format('woff');
-
-}
-
-@font-face {
-    font-family: myLato;
-    font-style: normal;
-    font-weight: bold;
-    font-display: swap;
-    src: url('fonts/LatoLatin-Medium.woff2') format('woff2'),
-         url('fonts/LatoLatin-Medium.woff') format('woff');
-
-}
-
-@font-face {
-    font-family: myLato;
-    font-style: normal;
-    font-weight: 200;
-    font-display: swap;
-    src: url('fonts/LatoLatin-Light.woff2') format('woff2'),
-         url('fonts/LatoLatin-Light.woff') format('woff');
-
-}
-
-@font-face {
-    font-family: myInconsolata;
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url('fonts/Inconsolata-Regular.otf');
-}
-/* End Custom fonts */
-
 /* Prism Style (use of !important to overide default style ) */
 pre {
   /*background-color: rgba(245,242,240,0.8) !important;*/
   z-index: 0;
   font-size: 1.6em !important;
-  font-family: myInconsolata, "Lucida Console", Monaco, monospace !important;
+  font-family: Inconsolata, "Lucida Console", Monaco, monospace !important;
   min-width: 100% !important;
   max-width: 100% !important;
   padding: 0 !important;
@@ -1199,7 +1149,7 @@ pre {
 }
 
 p > code {
-  font-family: myInconsolata, "Lucida Console", Monaco, monospace !important;
+  font-family: Inconsolata, "Lucida Console", Monaco, monospace !important;
   min-width: 160px;
   max-width: 860px;
   margin: 0 auto;
@@ -1209,13 +1159,13 @@ p > code {
 }
 
 code[class*="language-"] {
-  font-family: myInconsolata, "Lucida Console", Monaco, monospace !important;
+  font-family: Inconsolata, "Lucida Console", Monaco, monospace !important;
   white-space: pre-wrap;
 }
 
 .code_inline {
   color: #404040 !important; /* 3/4 black */
-  font-family: myInconsolata, "Lucida Console", Monaco, monospace !important;
+  font-family: Inconsolata, "Lucida Console", Monaco, monospace !important;
   font-size: 0.9em;
   background: #f5f2f0 !important;
   display: inline;
