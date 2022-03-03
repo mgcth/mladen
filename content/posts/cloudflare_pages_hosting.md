@@ -3,7 +3,7 @@ date: 2022-03-03
 author: Mladen Gibanica
 category: Projects
 tags: mysgen
-type: §§
+type:
 image:
 status: published
 
