@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   /* text-transform: uppercase; */
   margin: 10px 0;
   letter-spacing: 0.1em;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 h1 {
@@ -199,7 +199,7 @@ body {
   color: #000;
   font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 75%; /* Reset to 12px from the usual 16px */
 }
 /* End HTML and BODY */
@@ -400,7 +400,7 @@ body {
 /* Tiles */
 .main .hentry {
   font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
-  /* font-weight: 200; */
+  /* font-weight: 300; */
   margin: 0 auto;
   padding: 10px 0;
   min-width: 160px;
@@ -578,7 +578,7 @@ p a:hover {
 .main #post-list .published {
   font-family: Lato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   /* font-size: 1.6em; */
-  /* font-weight: 200; */
+  /* font-weight: 300; */
   text-transform: uppercase;
   position: absolute;
   bottom: 50px;
