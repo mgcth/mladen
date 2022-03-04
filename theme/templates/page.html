@@ -6,7 +6,7 @@
       <div id="content_{{title}}" class="content {% if title == page_name %}ajaxHook{% endif %}">
         {% if not (title + ".md" in pages.keys()) or title == "archive" %}
         <script>
-          $("#content_{{title}}").load("{{ siteurl }}/{{ link }} #ajax_content_{{title}}");
+          $("#content_{{title}}").load("/{{ link }} #ajax_content_{{title}}");
         </script>
         {% else %}
         <div id="ajax_content_{{ pages[title + ".md"].meta.title.lower() }}" class="ajax_content">
