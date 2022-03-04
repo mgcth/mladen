@@ -452,7 +452,7 @@ body {
 /* Tiles */
 .main .hentry {
   font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   margin: 0 auto;
   padding: 20px 40px;
   min-width: 160px;
@@ -616,7 +616,7 @@ p a:hover {
 .main #post-list .published {
   font-family: myLato, "Gill Sans", "Helvetica-Neue", Helvetica, sans-serif;
   font-size: 1.6em;
-  font-weight: 200;
+  font-weight: 300;
   text-transform: uppercase;
   position: absolute;
   bottom: 50px;
@@ -1265,78 +1265,6 @@ p a:hover {
   }
 }
 /* End Print */
-
-/* Custom fonts */
-@font-face {
-    font-family: myLato;
-    src: url('fonts/Lato/Lato-Regular.woff');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: myLato;
-    src: url('fonts/Lato/Lato-Italic.woff');
-    font-style: italic;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: myLato;
-    src: url('fonts/Lato/Lato-Medium.woff');
-    font-style: normal;
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: myLato;
-    src: url('fonts/Lato/Lato-Thin.woff');
-    font-style: normal;
-    font-weight: 100;
-}
-
-@font-face {
-    font-family: myLato;
-    src: url('fonts/Lato/Lato-Light.woff');
-    font-style: normal;
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: myInconsolata;
-    src: url('fonts/Inconsolata.otf');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: myStix;
-    src: url('fonts/Stix/STIX-Regular.otf');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: myStix;
-    src: url('fonts/Stix/STIX-Bold.otf');
-    font-style: normal;
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: myStix;
-    src: url('fonts/Stix/STIX-Italic.otf');
-    font-style: italic;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: myStix;
-    src: url('fonts/Stix/STIX-BoldItalic.otf');
-    font-style: italic;
-    font-weight: bold;
-}
-/* End Custom fonts */
 
 /* Prism Style (use of !important to overide default style ) */
 pre {
