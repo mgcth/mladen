@@ -14,7 +14,7 @@
   <meta name=viewport id="viewport" content="width=device-width, initial-scale=1">
   <!-- Define viewport -->
   <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ siteurl }}/css/favicon.ico">
+  <link rel="shortcut icon" href="/css/favicon.ico">
   <!-- End Favicon -->
   <!-- Font loading -->
   <style>
@@ -22,10 +22,10 @@
   </style>
   <!-- End font loading -->
   <!-- Load CSS -->
-  <link rel="stylesheet" type="text/css" href="{{ siteurl }}/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
   <noscript>
-    <link rel="stylesheet" type="text/css" href="{{ siteurl }}/css/noscript_style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/noscript_style.css" />
   </noscript>
   <!-- End Load CSS -->
   {% endblock head %}
@@ -85,7 +85,7 @@
       <li id="nav_{{ title }}" title="{{ title }}">
         <a class="nav_{{ title }} nav_link {% if ( title == "home" and page_name=="index" ) or ( title=="archives" and
           ( page_name=="archives" or page_name=="categories" or page_name=="tags" ) ) %}activeMenu{% endif %}"
-          title="{{ title }}" {% if ( title == "home" ) %} href="{{ siteurl }}/{{link}}" {% else %} href="{{ siteurl }}/{{link}}/" {% endif %}>
+          title="{{ title }}" {% if ( title == "home" ) %} href="/{{link}}" {% else %} href="/{{link}}/" {% endif %}>
           {{title}}
         </a>
       </li>
@@ -149,16 +149,16 @@
     <!-- End Load MathJax -->
     <!-- Load three.js -->
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
-    <script>window.processing || document.write('<script type="text/javascript" src="{{ siteurl }}/threejs/r68/three.min.js">\x3C/script>')</script> -->
+    <script>window.processing || document.write('<script type="text/javascript" src="/threejs/r68/three.min.js">\x3C/script>')</script> -->
     <!-- End Load three.js -->
     <!-- Load Site scripts -->
-    <script type="text/javascript" src="{{ siteurl }}/js/site_script.js"></script>
-    <script type="text/javascript" src="{{ siteurl }}/js/animation.js"></script>
-    <script type="text/javascript" src="{{ siteurl }}/js/navigation.js"></script>
+    <script type="text/javascript" src="/js/site_script.js"></script>
+    <script type="text/javascript" src="/js/animation.js"></script>
+    <script type="text/javascript" src="/js/navigation.js"></script>
     <!-- End Load Site scripts -->
 
     <!-- Load Graphics -->
-    <!-- <script src="{{ siteurl }}/graphics/graphics_01.js"></script> -->
+    <!-- <script src="/graphics/graphics_01.js"></script> -->
     <!-- End Load Graphics -->
 
     <!-- Pageload continue and Page end -->
