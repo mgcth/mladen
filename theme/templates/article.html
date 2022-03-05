@@ -31,7 +31,7 @@
     <div id="page_{{title}}" class="page" {% if title !=pageName %}style="display: none" {% endif %}>
       <div id="content_{{title}}" class="content {% if title == " pageName" %}ajaxHook{% endif %}">
         <script>
-          $("#content_{{title}}").load("{{ siteurl }}/{{ link }} #ajax_content_{{title}}");
+          $("#content_{{title}}").load("/{{ link }} #ajax_content_{{title}}");
         </script>
       </div>
     </div>
