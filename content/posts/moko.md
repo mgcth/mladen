@@ -9,8 +9,8 @@ image:
 data:
 status: published
 
-_In progress:_
-_This work is currently in progress, and most of my focus now is on writing more tests and not developing new features._
+*In progress:*
+*This work is currently in progress, and most of my focus now is on writing more tests and not developing new features.*
 
 When I moved into my new place, which is on the first floor, I thought about installing some sort of surveillance camera directed towards the window and balcony that are on ground level.
 Paid solutions exist, all too expensive and not hackable enough.
@@ -20,7 +20,7 @@ I set everything up and it worked for a few minutes, after which the computer wo
 After a few reinstalls, I concluded that motioneye wasn't any good and decided to write my own server and client, in the process learning som python backend development (using <a href="https://sanic.dev/en/" target="_blank">sanic</a>) and frontend (<a href="https://reactjs.org/" target="_blank">react</a>).
 Needles to say, motioneye works great, but VS Code was installing Node.js in the background on a computer with only 512 MB RAM.
 If you try it, you're gonna have a bad time.
-I found out about this when trying to develop _moko_ on the Raspberry Pi through VS Code and the computer kept crashing (and `top` showed a node task running).
+I found out about this when trying to develop *moko* on the Raspberry Pi through VS Code and the computer kept crashing (and `top` showed a node task running).
 However, at this point I was too excited to learn react.
 So, here we are.
 
