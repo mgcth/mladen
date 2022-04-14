@@ -7,7 +7,7 @@ tags: python, react, sanic, Raspberry Pi, camera
 type:
 image:
 data:
-status: unpublished
+status: published
 
 _In progress:_
 _This work is currently in progress, and most of my focus now is on writing more tests and not developing new features._
