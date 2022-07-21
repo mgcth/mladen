@@ -4,7 +4,7 @@ author: Mladen Gibanica
 category: Photos
 tags: travel, poland, gdansk
 type: photo
-image: gdansk_2022/IMG_9191.jpg
+image: IMG_9191.jpg
 status: published
 
 Canon EOS 550D, EF50mm f/1.8 STM II
