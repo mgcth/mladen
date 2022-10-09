@@ -6,7 +6,7 @@
     "default_lang": "en-gb",
     "site_path": "",
     "template_path": "theme/",
-    "content": "content",
+    "content": "content/",
     "templates": "templates",
     "output": "output",
     "home": "home",
