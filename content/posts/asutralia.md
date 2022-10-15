@@ -3,7 +3,6 @@ date: 2020-02-23
 author: Mladen Gibanica
 category: Photos
 tags: travel, australia
-type: photo
 image: 20200223_164156.jpg, 20200224_145354.jpg, 20200227_101027.jpg, 20200224_105701.jpg, 20200228_064037.jpg, 20200306_183729.jpg
 status: published
 

@@ -4,8 +4,6 @@ modified:
 author: Mladen Gibanica
 category: Projects
 tags: python, Raspberry Pi, spotify, last.fm, e-ink
-type:
-image:
 data: media_screen
 status: published
 
