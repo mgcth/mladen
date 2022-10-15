@@ -3,7 +3,6 @@ date: 2020-08-05
 author: Mladen Gibanica
 category: Photos
 tags: sweden, småland, forest, berries
-type: photo
 image: IMG_7918.jpg
 status: published
 

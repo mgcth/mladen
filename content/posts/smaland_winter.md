@@ -3,7 +3,6 @@ date: 2019-11-30
 author: Mladen Gibanica
 category: Photos
 tags: sweden, småland, winter, forest
-type: photo
 image: IMG_6203.jpg, IMG_5748.jpg
 status: published
 
