@@ -1,8 +1,14 @@
                     {% if meta.image %}
                     <article class="article-image">
-                        <figure>
-                            <img class="post-image" src="/{{meta.path}}/{{meta.image}}"/>
-                        </figure>
+                        <ol id="post-list" class="ordered-list" data-list-length="{{ meta.thumbnails|count }}">
+                            {% for image in meta.thumbnails %}
+                            <li class="photo list-style list-style-tiles" data-list="{{ meta.date.strftime('%Y-%m-%d') }}" data-month="{{ meta.date.strftime('%m') }}">
+                                <a id="{{ meta.slug }}" href="/{{ image }}" rel="bookmark" title="Permalink to {{ meta.title|striptags }}">
+                                    <img class="post-image-tile" src="/{{image}}"/>
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </ol>
                         <div class="article-image-wrapper">
                             <div class="article-image-inside">
                                 <header>
