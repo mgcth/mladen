@@ -3,8 +3,8 @@
                         <ol id="post-list" class="ordered-list" data-list-length="{{ meta.thumbnails|count }}">
                             {% for image in meta.thumbnails %}
                             <li class="photo list-style list-style-tiles" data-list="{{ meta.date.strftime('%Y-%m-%d') }}" data-month="{{ meta.date.strftime('%m') }}">
-                                <a id="{{ meta.slug }}" href="/{{ meta.path }}/{{ image }}" rel="bookmark" title="Permalink to {{ meta.title|striptags }}">
-                                    <img class="post-image-tile" src="/{{ meta.path }}/{{image}}"/>
+                                <a id="{{ meta.slug }}" href="/{{ meta.path }}/images/{{ image }}" rel="bookmark" title="Permalink to {{ meta.title|striptags }}">
+                                    <img class="post-image-tile" src="/{{ meta.path }}/images/{{image}}"/>
                                 </a>
                             </li>
                             {% endfor %}
