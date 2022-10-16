@@ -1,49 +1,24 @@
                     {% if meta.image %}
                     <article class="article-image">
-                        <ol id="post-list" class="ordered-list" data-list-length="{{ meta.thumbnails|count }}">
-                            {% for image in meta.thumbnails %}
-                            <li class="photo list-style list-style-tiles" data-list="{{ meta.date.strftime('%Y-%m-%d') }}" data-month="{{ meta.date.strftime('%m') }}">
-                                <a id="{{ meta.slug }}" href="/{{ meta.path }}/images/{{ image }}" rel="bookmark" title="Permalink to {{ meta.title|striptags }}">
-                                    <img class="post-image-tile" src="/{{ meta.path }}/images/{{image}}"/>
-                                </a>
-                            </li>
-                            {% endfor %}
-                        </ol>
+                        <header>
+                            <h1 class="entry-title">{{ meta.title }}</h1>
+                            <span class="published" title="{{ meta.date.isoformat() }}">
+                                / {{ meta.date.strftime("%Y-%m-%d") }} /
+                            </span>
+                            <span class="entry-title">
+                                {{ meta.category }}
+                            </span>
+                        </header>
                         <div class="article-image-wrapper">
-                            <div class="article-image-inside">
-                                <header>
-                                    <h1 class="entry-title">{{ meta.title }}</h1>
-                                    <span class="published" title="{{ meta.date.isoformat() }}">
-                                        / {{ meta.date.strftime("%Y-%m-%d") }} /
-                                    </span>
-                                    <span class="entry-title">
-                                        {{ meta.category }}
-                                    </span>
-                                </header>
-                                <!-- {% if meta.modified %}
-                                <span class="modified" title="{{ meta.modified.isoformat() }}">
-                                Updated {{ meta.modified.strftime("%Y-%m-%d") }} |
-                                </span>
-                                {% endif %}
-                                <span class="posted_in">
-                                {{ meta.category }} |
-                                {% for tag_ in range(0, meta.tags|length) %}
-                                {% if tag_ == meta.tags|length - 1 %}
-                                    {{ meta.tags[tag_] }}
-                                {% elif tag_ == (meta.tags|length - 2) %}
-                                    {{ meta.tags[tag_] }} |
-                                {% else %}
-                                    {{ meta.tags[tag_] }} |
-                                {% endif %}
+                            <ol id="post-list" class="ordered-list" data-list-length="{{ meta.thumbnails|count }}">
+                                {% for image in meta.thumbnails %}
+                                <li class="photo list-style list-style-tiles" data-list="{{ meta.date.strftime('%Y-%m-%d') }}" data-month="{{ meta.date.strftime('%m') }}">
+                                    <a id="{{ meta.slug }}" href="/{{ meta.path }}/images/{{ image }}" rel="bookmark" title="Permalink to {{ meta.title|striptags }}">
+                                        <img class="post-image-tile" src="/{{ meta.path }}/images/{{image}}"/>
+                                    </a>
+                                </li>
                                 {% endfor %}
-                                </span> -->
-
-                                <!-- <div class="article-content hyphenate">
-                                <div class="article_body">
-                                    {{ article_content }}
-                                </div>
-                                </div> -->
-                            </div>
+                            </ol>
                         </div>
                         <footer class="post-info"></footer>
                     </article>
