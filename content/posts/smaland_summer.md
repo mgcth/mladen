@@ -1,4 +1,4 @@
-title: Berries in Småland
+title: Småland summer
 date: 2020-08-05
 author: Mladen Gibanica
 category: Photos

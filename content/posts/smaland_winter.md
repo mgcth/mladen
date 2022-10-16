@@ -1,4 +1,4 @@
-title: Winter forest in Småland
+title: Småland winter
 date: 2019-11-30
 author: Mladen Gibanica
 category: Photos
