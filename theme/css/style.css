@@ -524,7 +524,7 @@ p a:hover {
   margin: 0;
 }
 
-.main .article header {
+.main article header {
   margin: 0 auto 0 auto;
   padding: 0 40px;
   min-width: 160px;
@@ -685,7 +685,7 @@ p a:hover {
   }
 
   .main ol li.photo {
-    height: 150px;
+    width: 250px;
     flex-grow: 1;
     margin: 5px;
   }
