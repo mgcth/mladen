@@ -917,15 +917,6 @@ article .article-content .article_body > h6 {
   .main ol {
     max-width: calc(100% - 80px);
   }
-
-  .main ol#photos {
-    max-width: calc(100% - 76px);
-  }
-
-  .main ol li.photo {
-    max-height: 205px;
-    max-width: 205px;
-  }
 }
 
 /* Account for mobile devices and the "largest" reported device-width was 414px on iPhone 6 Plus*/
@@ -959,9 +950,13 @@ article .article-content .article_body > h6 {
   }
 
   .main ol#photos {
-    max-width: calc(100% - 36px);
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
+  }
+
+  .main ol li.photo {
+    max-height: 100px;
+    max-width: 100px;
   }
 
   .main .hentry {
