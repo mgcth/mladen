@@ -659,7 +659,8 @@ article .article-content .article_body > h6 {
     margin: 0 auto;
     max-width: 860px;
     display: grid;
-    grid-template: repeat(4, 1fr) / auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
     gap: 5px;
 
   }
@@ -667,13 +668,12 @@ article .article-content .article_body > h6 {
   .main ol li {
     padding: 0;
     position: relative;
-    margin: 1px 0 0 0;
     opacity: 1;
   }
 
-  .main ol li.photos img {
-    max-height: 100%;
-    min-width: 100%;
+  .main ol li.photo img {
+    height: 205px;
+    width: 205px;
     object-fit: cover;
     vertical-align: bottom;
   }
@@ -921,8 +921,9 @@ article .article-content .article_body > h6 {
     max-width: calc(100% - 76px);
   }
 
-  .main ol li.photo {
-    height: 100px;
+  .main ol li.photo img {
+    max-height: 205px;
+    max-width: 205px;
   }
 }
 
@@ -962,6 +963,11 @@ article .article-content .article_body > h6 {
 
   .main ol li.photo {
     height: 75px;
+  }
+
+  .main ol li.photo img {
+    max-height: 100px;
+    max-width: 100px;
   }
 
   .main .hentry {

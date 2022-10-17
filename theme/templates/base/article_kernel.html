@@ -11,9 +11,9 @@
                         </header>
                         <div class="article-content hyphenate">
                             <div class="article_body">
-                                <ol id="photo-container" class="ordered-list" data-list-length="{{ meta.thumbnails|count }}">
+                                <ol id="photos" class="ordered-list" data-list-length="{{ meta.thumbnails|count }}">
                                     {% for image in meta.thumbnails %}
-                                    <li class="photo photo-item list-style list-style-tiles" data-list="{{ meta.date.strftime('%Y-%m-%d') }}" data-month="{{ meta.date.strftime('%m') }}">
+                                    <li class="photo list-style list-style-tiles" data-list="{{ meta.date.strftime('%Y-%m-%d') }}" data-month="{{ meta.date.strftime('%m') }}">
                                         <a id="{{ meta.slug }}" href="/{{ meta.path }}/images/{{ image }}" rel="bookmark" title="Permalink to {{ meta.title|striptags }}">
                                             <img class="post-image-tile" src="/{{ meta.path }}/images/{{image}}"/>
                                         </a>
