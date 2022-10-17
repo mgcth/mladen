@@ -538,7 +538,7 @@ p a:hover {
   letter-spacing: 0.1em;
 }
 
-.article .article-content > .article_body {
+article .article-content > .article_body {
   margin-left: auto;
   margin-right: auto;
   padding: 20px 40px;
@@ -546,11 +546,11 @@ p a:hover {
   max-width: 860px;
 }
 
-.article .article-content .article_body > h2,
-.article .article-content .article_body > h3,
-.article .article-content .article_body > h4,
-.article .article-content .article_body > h5,
-.article .article-content .article_body > h6 {
+article .article-content .article_body > h2,
+article .article-content .article_body > h3,
+article .article-content .article_body > h4,
+article .article-content .article_body > h5,
+article .article-content .article_body > h6 {
   padding: 20px 0 0;
 }
 
@@ -1025,15 +1025,15 @@ p a:hover {
     padding: 0 20px;
   }
 
-  .article .article-content > .article_body {
+  article .article-content > .article_body {
     padding: 20px;
   }
 
-  .article .article-content .article_body > h2,
-  .article .article-content .article_body > h3,
-  .article .article-content .article_body > h4,
-  .article .article-content .article_body > h5,
-  .article .article-content .article_body > h6 {
+  article .article-content .article_body > h2,
+  article .article-content .article_body > h3,
+  article .article-content .article_body > h4,
+  article .article-content .article_body > h5,
+  article .article-content .article_body > h6 {
     padding: 20px 0 0;
   }
 
