@@ -661,7 +661,7 @@ article .article-content .article_body > h6 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 5px;
+    gap: 10px;
 
   }
 
@@ -669,11 +669,12 @@ article .article-content .article_body > h6 {
     padding: 0;
     position: relative;
     opacity: 1;
+    max-height: 205px;
+    max-width: 205px;
   }
 
   .main ol li.photo img {
-    height: 205px;
-    width: 205px;
+    width: 100%;
     object-fit: cover;
     vertical-align: bottom;
   }
@@ -921,7 +922,7 @@ article .article-content .article_body > h6 {
     max-width: calc(100% - 76px);
   }
 
-  .main ol li.photo img {
+  .main ol li.photo {
     max-height: 205px;
     max-width: 205px;
   }
@@ -959,15 +960,8 @@ article .article-content .article_body > h6 {
 
   .main ol#photos {
     max-width: calc(100% - 36px);
-  }
-
-  .main ol li.photo {
-    height: 75px;
-  }
-
-  .main ol li.photo img {
-    max-height: 100px;
-    max-width: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
   }
 
   .main .hentry {
