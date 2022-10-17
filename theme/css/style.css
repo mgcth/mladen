@@ -657,24 +657,11 @@ article .article-content .article_body > h6 {
   .main ol.photos {
     list-style-type: none;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     max-width: 860px;
-    gap: 2px;
-  }
+    display: grid;
+    grid-template: repeat(4, 1fr) / auto;
+    gap: 5px;
 
-  .main ol.photos::after {
-    content: "";
-    flex-grow: 10;
-  }
-
-  .main ol.photos img {
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
   }
 
   .main ol li {
@@ -684,14 +671,11 @@ article .article-content .article_body > h6 {
     opacity: 1;
   }
 
-  .main ol li.photo {
-    width: 250px;
-    flex-grow: 1;
-    margin: 5px;
-  }
-
-  .main ol li:first-child {
-    margin: 0;
+  .main ol li.photos img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
   }
 
   .list-style {
