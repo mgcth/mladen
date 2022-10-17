@@ -654,7 +654,7 @@ article .article-content .article_body > h6 {
     max-width: 860px;
   }
 
-  .main ol.photos {
+  .main ol#photos {
     list-style-type: none;
     margin: 0 auto;
     max-width: 860px;
@@ -917,7 +917,7 @@ article .article-content .article_body > h6 {
     max-width: calc(100% - 80px);
   }
 
-  .main ol.photos {
+  .main ol#photos {
     max-width: calc(100% - 76px);
   }
 
@@ -957,7 +957,7 @@ article .article-content .article_body > h6 {
     max-width: calc(100% - 40px);
   }
 
-  .main ol.photos {
+  .main ol#photos {
     max-width: calc(100% - 36px);
   }
 
