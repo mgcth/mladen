@@ -22,7 +22,7 @@
                     <ol id="post-list" class="photos ordered-list" data-list-length="{{ articles|count }}">
                         {% for article in articles %}
                         {% if article.category == "Photos" and article.image %}
-                        {% include 'base/photos_kernel.html' %}
+                        {% include 'base/archive_kernel.html' %}
                         {% endif %}
                         {% endfor %}
                     </ol>

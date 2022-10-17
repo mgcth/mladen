@@ -680,6 +680,7 @@ article .article-content .article_body > h6 {
     width: 100%;
     object-fit: cover;
     vertical-align: bottom;
+    aspect-ratio: 1/1;
   }
 
   .list-style {
@@ -919,6 +920,11 @@ article .article-content .article_body > h6 {
 
   .main ol {
     max-width: calc(100% - 80px);
+  }
+
+  .main ol#photos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
   }
 }
 
