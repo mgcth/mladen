@@ -1,7 +1,7 @@
 title: Home
 date: 2014-01-17
 author: Mladen Gibanica
-url:
+type: index
 status: published
 
 This is my personal website. Here, you can find posts related to some of my research, personal projects and various other interests.

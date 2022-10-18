@@ -4,9 +4,6 @@ modified:
 author: Mladen Gibanica
 category: Projects
 tags: python, react, sanic, Raspberry Pi, camera
-type:
-image:
-data:
 status: published
 
 *In progress:*
