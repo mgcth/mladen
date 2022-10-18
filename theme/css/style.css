@@ -16,7 +16,7 @@ Version: 0.3
   right: 0;
   margin: 0;
   padding: 0;
-  z-index: 2;
+  z-index: 3;
   background: #fafafa;
   align-items: center;
   justify-content: center;
@@ -641,18 +641,27 @@ article .article-content .article_body > h6 {
 
 .lightbox {
   display: none;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1em;
-  background: rgba(0, 0, 0, 0.8);
 }
 
 .lightbox:target {
   display: block;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 90px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.lightbox span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
   /* Lists */

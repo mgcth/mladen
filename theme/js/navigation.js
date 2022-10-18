@@ -110,7 +110,11 @@ if (window.history && history.pushState) {
   $("#main").on('click', 'a', function(e) {
     if ($(this).attr("target") == "_blank") {
       // Do nothing for external links
-    } else {
+    }
+    else if ($(this).attr("href")[0] == "#") {
+      // Do nothing for hash links
+    }
+    else {
       // Prevent default action if internal link
       e.preventDefault();
 
@@ -140,8 +144,11 @@ $(window).on('popstate', function(e) {
   // Get the previous state
   var state = e.originalEvent.state;
 
+  if (!state) {
+    // No previous state
+  }
   // If no nearby previous event has been fired
-  if (isPopstate == false) {
+  else if (isPopstate == false) {
     // Perform the loading and update history
     doPushState(state.item, state.url, true);
 
