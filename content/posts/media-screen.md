@@ -1,4 +1,4 @@
-title: media screen
+title: media-screen
 date: 2022-01-09
 modified:
 author: Mladen Gibanica
@@ -11,13 +11,13 @@ I've been using a Raspberry Pi 3 for years with a DAC HAT connected to a pair of
 The Python code can be found here: <a href="https://github.com/mgcth/media_screen" target="_blank">media screen</a>.
 
 <div>
-	<img width="100%" src="{{posturl}}/data/20220130_111004.jpg" type="image/jpg">
+	<img width="100%" src="{{post_url}}/data/20220130_111004.jpg" type="image/jpg">
 	<small>Front view.</small>
 </div>
 
 <div>
 	<video playsinline autoplay loop mute id="video1" height="100%" width="100%">
-	    <source src="{{posturl}}/data/media_screen.mp4" type="video/mp4">
+	    <source src="{{post_url}}/data/media_screen.mp4" type="video/mp4">
 		Your browser does not support HTML video.
 	</video>
 	<small>Example of screen update.</small>
@@ -25,13 +25,13 @@ The Python code can be found here: <a href="https://github.com/mgcth/media_scree
 
 <div>
     <div style="display: flex; justify-content: space-between;">
-        <img style="width: 49% !important;" src="{{posturl}}/data/20220130_111022.jpg" type="image/jpg">
-        <img style="width: 49% !important;" src="{{posturl}}/data/20220130_111037.jpg" type="image/jpg">
+        <img style="width: 49% !important;" src="{{post_url}}/data/20220130_111022.jpg" type="image/jpg">
+        <img style="width: 49% !important;" src="{{post_url}}/data/20220130_111037.jpg" type="image/jpg">
     </div>
 	<small>Top view (left) and side view (right).</small>
 </div>
 
 <div>
-	<img width="100%" src="{{posturl}}/data/20220130_110951.jpg" type="image/jpg">
+	<img width="100%" src="{{post_url}}/data/20220130_110951.jpg" type="image/jpg">
 	<small>Close-up view.</small>
 </div>
