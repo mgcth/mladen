@@ -19,5 +19,6 @@
         "meta",
         "fenced_code",
         "mdx_math"
-    ]
+    ],
+    "s3-bucket": "mladen"
 }
