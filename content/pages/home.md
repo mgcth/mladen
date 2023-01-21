@@ -4,15 +4,16 @@ author: Mladen Gibanica
 type: index
 status: published
 
-## Hi,
+<h1 style="font-weight: 400; font-size: 4em;">Hi.</h1>
 
-### My name is Mladen Gibanica.
+<h2 style="margin: 40px 0; font-weight: 400;">My name is Mladen Gibanica.<h2>
 
 I am a Senior Data Scientist at Volvo Cars and Co-founder of
 <a href="https://github.com/Ingenjorsarbete-For-Klimatet" target="_blank">Ingenjörsarbete För Klimatet (IFK)</a>.
+My background is in Dynamics; more specifically I have a
+<a href="https://research.chalmers.se/en/publication/514656" target="_blank">PhD in identification of dynamical systems</a>.
 You can find my publicly available work on
 <a href="https://github.com/mgcth" target="_blank">GitHub</a>.
-I have a PhD in identification of dynamical systems.
 
 This is my personal website.
 Here, you can find posts related to some of my research,
