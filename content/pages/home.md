@@ -6,7 +6,7 @@ status: published
 
 <h1 style="font-weight: 400; font-size: 4em;">Hi.</h1>
 
-<h2 style="margin: 40px 0; font-weight: 400;">My name is Mladen Gibanica.<h2>
+<h2 style="margin: 40px 0; font-weight: 400;">My name is Mladen Gibanica.</h2>
 
 I am a Senior Data Scientist at Volvo Cars and Co-founder of
 <a href="https://github.com/Ingenjorsarbete-For-Klimatet" target="_blank">Ingenjörsarbete För Klimatet (IFK)</a>.
