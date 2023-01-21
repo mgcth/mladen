@@ -4,10 +4,23 @@ author: Mladen Gibanica
 type: index
 status: published
 
-This is my personal website. Here, you can find posts related to some of my research, personal projects and various other interests.
+## Hi,
 
-This site was generated with <a href="https://github.com/mgcth/mysgen" target="_blank">mysgen</a>, a simple static-site generator built with <a href="https://www.python.org/" target="_blank">Python</a> and <a href="https://jinja.palletsprojects.com/" target="_blank">Jinja2</a>. It also relies on the following open-source projects: <a href="https://highlightjs.org/" target="_blank">highlight.js</a>, <a href="https://leaverou.github.io/prefixfree/" target="_blank">-prefix-free</a>, <a href="https://jquery.com/" target="_blank">jQuery</a>, <a href="https://www.mathjax.org/" target="_blank">MathaJax</a>, <a href="https://www.latofonts.com/" target="_blank">Lato</a> and <a href="https://www.levien.com/type/myfonts/inconsolata.html" target="_blank">Inconsolata</a>. The site is hosted using <a href="https://pages.cloudflare.com/" target="_blank">Cloudflare Pages</a>. No tracking, cookies or logging of server activity is used (well, apart from whatever <a href="https://www.cloudflare.com" target="_blank">Cloudflare</a> and <a href="https://fonts.google.com/" target="_blank">Google</a> do).
+### My name is Mladen Gibanica.
 
+I am a Senior Data Scientist at Volvo Cars and Co-founder of
+<a href="https://github.com/Ingenjorsarbete-For-Klimatet" target="_blank">Ingenjörsarbete För Klimatet (IFK)</a>.
+You can find my publicly available work on
+<a href="https://github.com/mgcth" target="_blank">GitHub</a>.
+I have a PhD in identification of dynamical systems.
+
+This is my personal website.
+Here, you can find posts related to some of my research,
+personal <a href="https://mladen.gibanica.net/projects/">projects</a> and other interests.
+I occasionally take <a href="https://mladen.gibanica.net/photos/">photos</a>, too.
+
+This site was generated with
+<a href="https://github.com/mgcth/mysgen" target="_blank">mysgen</a>,
+a simple custom static-site generator.
 Content on this site is under copyright, if not stated otherwise.
-
 Site last updated {{update_date}}.
