@@ -4,7 +4,7 @@ author: Mladen Gibanica
 type: index
 status: published
 
-<h1 style="font-weight: 400; font-size: 4em;">Hi.</h1>
+<h1 style="font-weight: 400; font-size: 4em;">Hi,</h1>
 
 <h2 style="margin: 40px 0; font-weight: 400;">My name is Mladen Gibanica.</h2>
 
@@ -15,13 +15,12 @@ My background is in Dynamics; more specifically I have a
 You can find my publicly available work on
 <a href="https://github.com/mgcth" target="_blank">GitHub</a>.
 
-This is my personal website.
-Here, you can find posts related to some of my research,
-personal <a href="https://mladen.gibanica.net/projects/">projects</a> and other interests.
+This is my personal website with posts related to research,
+<a href="https://mladen.gibanica.net/projects/">projects</a> and other interests.
 I occasionally take <a href="https://mladen.gibanica.net/photos/">photos</a>, too.
 
 This site was generated with
 <a href="https://github.com/mgcth/mysgen" target="_blank">mysgen</a>,
-a simple custom static-site generator.
+a simple static-site generator.
 Content on this site is under copyright, if not stated otherwise.
-Site last updated {{update_date}}.
+Last updated {{update_date}}.
