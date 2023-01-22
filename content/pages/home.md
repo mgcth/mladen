@@ -4,7 +4,7 @@ author: Mladen Gibanica
 type: index
 status: published
 
-<h1 style="font-weight: 400; font-size: 4em;">Hi,</h1>
+<h1 style="font-weight: 400; font-size: 4em;">Hi.</h1>
 
 <h2 style="margin: 40px 0; font-weight: 400;">My name is Mladen Gibanica.</h2>
 
