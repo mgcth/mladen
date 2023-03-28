@@ -14,9 +14,9 @@ has been released. The docs can be found
 <a href="https://ingenjorsarbeteforklimatet.se/ifk-smhi/" target="_blank">
 here</a>.
 
-You can use it to get data from some of the different SMHI APIs.
+You can use it to get data from the supported SMHI APIs.
 Note that, most answers from the API are in Swedish and that the code
-is for version 0.1.1 of ifk-smhi.
+on this page is using version 0.1.1 of ifk-smhi.
 
 ## Metobs
 
@@ -69,7 +69,7 @@ periods = Periods(stations, station_name="Göteborg A")
 periods.show
 ```
 
-yielding
+which lists the available periods
 
 ```python
 corrected-archive
@@ -78,14 +78,15 @@ latest-hour
 latest-months
 ```
 
-Finally, to get the data we can call (which implicitly asks for `"corrected-archive"`)
+Finally, to get the data we can call (which implicitly asks for
+the `"corrected-archive"` period)
 
 ```python
 data = Data(periods)
 data.data
 ```
 
-which outputs a Pandas DataFrame with the data
+which outputs a Pandas DataFrame
 
 ```python
                      Lufttemperatur
@@ -105,7 +106,7 @@ which outputs a Pandas DataFrame with the data
 ```
 
 Note that, usually the last three months are missing from the
-`"corrected-archive"` periods. We can plot this data.
+`"corrected-archive"` period. We can plot this data in a scatter plot.
 Here, only the daily average is shown to limit the data, see Plot code details.
 
 <details>
@@ -146,8 +147,8 @@ src="data/air_temperature_gothenburg_a.html" height="525" width="100%">
 ## Strang
 
 What if we wanted to get a sense of the global irradiance over
-Sweden's geographics area? We could try fetching the global irradiance
-from Metobs as
+Sweden's geographic area? We could try fetching the global irradiance
+(parameter `11`) from Metobs as
 
 ```python
 stations = Stations(parameter, 11)
@@ -178,9 +179,10 @@ which will output
 (180025, 'Kiruna Sol')
 ```
 
-However, this only gives us the 19 stations that are measuring
-global irradiance. We could instead use the STRÅNG API which is
-a simulation model of the global irradiance. So let's try it out.
+This only gives us the 19 stations that are measuring
+global irradiance. To increase the spatial resolution,
+we could instead use the STRÅNG API which is a simulation
+model of the global irradiance. We can use it as
 
 ```python
 from smhi.strang import Strang
@@ -189,7 +191,7 @@ strang = Strang()
 parameters = strang.parameters
 ```
 
-will print out all possible parameters
+which will print out all possible parameters
 
 ```python
 parameter: 116, info: CIE UV irradiance [mW/m²]
@@ -213,7 +215,7 @@ which tells us
 datetime.datetime(1999, 1, 1, 0, 0, tzinfo=tzutc())
 ```
 
-Now, we can get a multi-point response of the data for that
+Now, we can get a multi-point response from the API for that
 day aggregated `daily`
 
 ```python
@@ -240,7 +242,7 @@ which gives us a Pandas DataFrame
 [11832 rows x 3 columns]
 ```
 
-We can visualise this data in a scatter plot.
+We can again visualise this data in a scatter plot.
 
 <details>
     <summary>Scatter plot code</summary>
