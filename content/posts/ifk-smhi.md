@@ -4,6 +4,7 @@ author: Mladen Gibanica
 category: Projects
 tags: climate, data, smhi
 status: published
+data:
 
 <a href="https://github.com/Ingenjorsarbete-For-Klimatet/ifk-smhi"
 target="_blank">ifk-smhi</a>,
