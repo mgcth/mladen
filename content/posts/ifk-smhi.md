@@ -141,7 +141,7 @@ fig.show()
 <iframe id="igraph"
 alt="Historic data of air temperature in Göteborg A, from SMHI"
 scrolling="no" style="border:none;" seamless="seamless"
-src="data/air_temperature_gothenburg_a.html" height="525" width="100%">
+src="{{post_url}}/data/air_temperature_gothenburg_a.html" height="525" width="100%">
 </iframe>
 
 ## Strang
@@ -276,5 +276,5 @@ fig.show()
 <iframe id="igraph"
 alt="Historic data of air temperature in Göteborg A, from SMHI"
 scrolling="no" style="border:none;" seamless="seamless"
-src="data/global_irradiance.html" height="525" width="100%">
+src="{{post_url}}/data/global_irradiance.html" height="525" width="100%">
 </iframe>
