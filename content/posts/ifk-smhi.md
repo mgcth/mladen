@@ -10,7 +10,7 @@ data:
 target="_blank">ifk-smhi</a>,
 a Python package for interfacing a subset of
 <a href="https://opendata.smhi.se/apidocs/" target="_blank">SMHI APIs</a>,
-has been released. The docs can be found here
+has been released. The docs can be found
 <a href="https://ingenjorsarbeteforklimatet.se/ifk-smhi/" target="_blank">
 here</a>.
 
@@ -29,7 +29,7 @@ parameter = Parameters()
 parameter.show
 ```
 
-will output
+which will output
 
 ```python
 ('1', 'Lufttemperatur', 'momentanvärde, 1 gång/tim')
@@ -47,7 +47,7 @@ stations = Stations(parameter, 1)
 stations.show
 ```
 
-outputs a list with 968 entries
+which will show a list with 968 entries
 
 ```python
 (1, 'Akalla')
@@ -62,24 +62,27 @@ outputs a list with 968 entries
 ...
 ```
 
-To get all available periods of the `"Göteborg A"` station we run
+Next, we want to get all available periods of the `"Göteborg A"` station
 
 ```python
 periods = Periods(stations, station_name="Göteborg A")
 periods.show
 ```
 
-outputting only one period
+yielding
 
 ```python
-'corrected-archive'
+corrected-archive
+latest-day
+latest-hour
+latest-months
 ```
 
-Finally, to get the data we can call
+Finally, to get the data we can call (which implicitly asks for `"corrected-archive"`)
 
 ```python
 data = Data(periods)
-data.show
+data.data
 ```
 
 which outputs a Pandas DataFrame with the data
@@ -101,9 +104,9 @@ which outputs a Pandas DataFrame with the data
 [303469 rows x 1 columns]
 ```
 
-Note that, usually the last three months are missing from the data.
-We will limit the data to only measurements from 12:00 for every day,
-see Plot code details. We can plot this data
+Note that, usually the last three months are missing from the
+`"corrected-archive"` periods. We can plot this data.
+Here, only the daily average is shown to limit the data, see Plot code details.
 
 <details>
     <summary>Plot code</summary>
@@ -111,22 +114,23 @@ see Plot code details. We can plot this data
 ```python
 import plotly.graph_objects as go
 
-time_index = [x for x in data.data.index if "12:00:00" in str(x)]
+data_agg_day = data.data.resample("D").mean()
 fig = go.Figure()
 fig.add_trace(
     go.Scattergl(
-        x=time_index,
-        y=data.data.loc[time_index, "Lufttemperatur"],
+        x=data_agg_day.index,
+        y=data_agg_day["Lufttemperatur"],
         mode="markers",
         name="Göteborg A station"
     )
 )
 fig.update_layout(
-    title='Air temperature in Göteborg A',
+    title="Air temperature in Göteborg A",
     xaxis_title="Year",
     yaxis_title="Air temperature [°C]",
     legend={"orientation": "h"},
-    margin={"l": 0, "r": 0, "b": 80, "t": 100}
+    margin={"l": 0, "r": 0, "b": 80, "t": 100},
+    paper_bgcolor="rgba(250, 250, 250, 1)",
 )
 fig.show()
 ```
@@ -142,15 +146,15 @@ src="data/air_temperature_gothenburg_a.html" height="525" width="100%">
 ## Strang
 
 What if we wanted to get a sense of the global irradiance over
-Sweden's geographics area. We could try fetching the global irradiance
-from Metobs again as
+Sweden's geographics area? We could try fetching the global irradiance
+from Metobs as
 
 ```python
 stations = Stations(parameter, 11)
 stations.show
 ```
 
-outputting
+which will output
 
 ```python
 (53445, 'Lund Sol')
@@ -174,9 +178,9 @@ outputting
 (180025, 'Kiruna Sol')
 ```
 
-However, we only have 19 stations measuring global irradiance.
-We could instead use the STRÅNG API which is a simulation model
-of the global irradiance. So let's try it out.
+However, this only gives us the 19 stations that are measuring
+global irradiance. We could instead use the STRÅNG API which is
+a simulation model of the global irradiance. So let's try it out.
 
 ```python
 from smhi.strang import Strang
@@ -185,7 +189,7 @@ strang = Strang()
 parameters = strang.parameters
 ```
 
-will print out the possible parameters to get
+will print out all possible parameters
 
 ```python
 parameter: 116, info: CIE UV irradiance [mW/m²]
@@ -196,21 +200,21 @@ parameter: 121, info: Direct horizontal irradiance [W/m²]
 parameter: 122, info: Diffuse irradiance [W/m²]
 ```
 
-We are interested in parameter 117 here and can get a
-multi-point response from STRÅNG. First, let's find out how
+We are interested in parameter 117 here. First, let's find out how
 far back in time we can get the data from
 
 ```python
 strang.available_parameters[117].time_from
 ```
 
-giving
+which tells us
 
 ```python
 datetime.datetime(1999, 1, 1, 0, 0, tzinfo=tzutc())
 ```
 
-So, now we can get the data aggregated `daily`
+Now, we can get a multi-point response of the data for that
+day aggregated `daily`
 
 ```python
 data = strang.get_multipoint(117, "1999-01-01", "daily")
@@ -238,8 +242,6 @@ which gives us a Pandas DataFrame
 
 We can visualise this data in a scatter plot.
 
-We can plot this data
-
 <details>
     <summary>Scatter plot code</summary>
 
@@ -257,11 +259,12 @@ fig.add_trace(
     )
 )
 fig.update_layout(
-    title='Global irradiance 1999-01-01 daily',
+    title="Global irradiance 1999-01-01 daily",
     xaxis_title="Longitude",
     yaxis_title="Latitude",
     legend={"orientation": "h"},
-    margin={"l": 0, "r": 0, "b": 80, "t": 100}
+    margin={"l": 0, "r": 0, "b": 80, "t": 100},
+    paper_bgcolor="rgba(250, 250, 250, 1)",
 )
 fig.show()
 ```
