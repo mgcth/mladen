@@ -257,7 +257,10 @@ fig.add_trace(
         y=data["lat"],
         mode="markers",
         name="Global irradiance 1999-01-01 daily",
-        marker={"color": data["Global irradiance [W/m²] 1999-01-01T00:00:00+00:00 daily"]},
+        marker={
+          "color": data["Global irradiance [W/m²] 1999-01-01T00:00:00+00:00 daily"],
+          "colorbar": {"title": "[W/m²]"},
+        },
     )
 )
 fig.update_layout(
