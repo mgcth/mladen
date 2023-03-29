@@ -225,7 +225,6 @@ body {
     position: fixed;
     text-transform: uppercase;
     z-index: 1;
-    font-size: 1.1662em;
     top: 40px;
     left: calc(50% - 430px);
     /*530px*/
@@ -811,8 +810,22 @@ dl dd[data-list]::after {
     }
 
     .main .page {
-        padding: 80px 0 0 0;
-        height: calc(100% - 80px);
+        padding: 90px 0 0 0;
+        height: calc(100% - 90px);
+    }
+
+    .main ol {
+        max-width: calc(100% - 40px);
+    }
+
+    .main ol#photos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+
+    .main ol li.photo {
+        max-height: 100px;
+        max-width: 100px;
     }
 
     .main .entry-content {
@@ -825,6 +838,67 @@ dl dd[data-list]::after {
 
     .main .entry-content-page-title {
         padding: 0 20px;
+    }
+
+    .main {
+        font-size: 1em;
+        /*line-height: 1.5em;*/
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    h5 {
+        font-size: 1em;
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+
+    .main .article header {
+        padding: 0 20px;
+    }
+
+    article .article-content .article_body>h2,
+    article .article-content .article_body>h3,
+    article .article-content .article_body>h4,
+    article .article-content .article_body>h5,
+    article .article-content .article_body>h6 {
+        padding: 20px 0 0;
+    }
+
+    .main #post-list .published {
+        right: 20px;
+    }
+
+    .main #post-list .posted_in {
+        right: 20px;
+    }
+
+    ul.unordered-list li[data-list]::after {
+        padding: 0 20px;
+    }
+
+    dl dt {
+        padding: 0 20px;
+    }
+
+    dl dd[data-list]::after {
+        padding: 0 20px 0 !important;
     }
 }
 
@@ -861,12 +935,8 @@ dl dd[data-list]::after {
     }
 
     .main .page {
-        padding: 75px 0 0 0;
-        height: calc(100% - 75px);
-    }
-
-    .main .home-page {
-        padding: 0 10px;
+        padding: 80px 0 0 0;
+        height: calc(100% - 80px);
     }
 
     .main ol {
@@ -883,11 +953,6 @@ dl dd[data-list]::after {
         max-width: 100px;
     }
 
-    .main .hentry {
-        padding: 10px 0px;
-        /*height: 150px;*/
-    }
-
     .main .entry-content {
         padding: 0 10px;
     }
@@ -901,7 +966,7 @@ dl dd[data-list]::after {
     }
 
     .main p {
-        font-size: 1.2em;
+        font-size: 1em;
         /*line-height: 1.5em;*/
     }
 
