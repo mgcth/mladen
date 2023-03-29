@@ -956,6 +956,37 @@ article .article-content .article_body > h6 {
 }
 
 /* Account for mobile devices and the "largest" reported device-width was 414px on iPhone 6 Plus*/
+@media screen and (max-width: 490px) {
+    #nav {
+      top: 20px;
+      left: 20px;
+    }
+
+    #nav li {
+      height: 40px;
+    }
+
+    #nav li a {
+      height: 40px;
+      padding: 0 10px;
+    }
+
+    .nav #menu-icon {
+      height: 40px;
+      padding: 0 10px;
+    }
+
+    .main .page {
+      padding: 75px 0 0 0;
+      height: calc(100% - 75px);
+    }
+
+    .main .home-page {
+      padding: 0 20px;
+    }
+}
+
+
 @media screen and (max-width: 415px) {
   noscript, .old-browsers {
     font-size: 1em;
