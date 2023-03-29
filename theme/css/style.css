@@ -770,6 +770,61 @@ dl dd[data-list]::after {
 /* End Lists */
 /* End Main */
 
+/* Prism Style (use of !important to overide default style ) */
+pre {
+    /*background-color: rgba(245,242,240,0.8) !important;*/
+    z-index: 0;
+    font-size: 1.6em !important;
+    font-family: "Source Code Pro", monospace !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+p>code {
+    font-family: "Source Code Pro", monospace !important;
+    min-width: 160px;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2px !important;
+    line-height: 1.4;
+    background: #efeffe;
+}
+
+code[class*="language-"] {
+    font-family: "Source Code Pro", monospace !important;
+    white-space: pre-wrap;
+}
+
+.code_inline {
+    color: #404040 !important;
+    /* 3/4 black */
+    font-family: "Source Code Pro", monospace !important;
+    font-size: 0.9em;
+    background: #f5f2f0 !important;
+    display: inline;
+    padding: 3px !important;
+    color: #000;
+}
+
+/* End Prism Style */
+
+.profile-image {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    float: right;
+    margin-left: 40px;
+}
+
+.isolate_moving_object-image {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    height: auto;
+}
+
 /*Special menu fix*/
 @media screen and (max-width: 940px) {
     #nav {
@@ -1101,58 +1156,3 @@ dl dd[data-list]::after {
 }
 
 /* End Print */
-
-/* Prism Style (use of !important to overide default style ) */
-pre {
-    /*background-color: rgba(245,242,240,0.8) !important;*/
-    z-index: 0;
-    font-size: 1.6em !important;
-    font-family: "Source Code Pro", monospace !important;
-    min-width: 100% !important;
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-p>code {
-    font-family: "Source Code Pro", monospace !important;
-    min-width: 160px;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 2px !important;
-    line-height: 1.4;
-    background: #efeffe;
-}
-
-code[class*="language-"] {
-    font-family: "Source Code Pro", monospace !important;
-    white-space: pre-wrap;
-}
-
-.code_inline {
-    color: #404040 !important;
-    /* 3/4 black */
-    font-family: "Source Code Pro", monospace !important;
-    font-size: 0.9em;
-    background: #f5f2f0 !important;
-    display: inline;
-    padding: 3px !important;
-    color: #000;
-}
-
-/* End Prism Style */
-
-.profile-image {
-    width: 125px;
-    height: 125px;
-    object-fit: cover;
-    border-radius: 50%;
-    float: right;
-    margin-left: 40px;
-}
-
-.isolate_moving_object-image {
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;
-    height: auto;
-}
