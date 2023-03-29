@@ -453,7 +453,7 @@ body {
 }
 
 .main p {
-    font-size: 1.8em;
+    font-size: 1.6em;
     line-height: 1.5em;
     text-align: justify;
     margin: 0;
@@ -774,7 +774,7 @@ dl dd[data-list]::after {
 pre {
     /*background-color: rgba(245,242,240,0.8) !important;*/
     z-index: 0;
-    font-size: 1.6em !important;
+    font-size: 1em !important;
     font-family: "Source Code Pro", monospace !important;
     min-width: 100% !important;
     max-width: 100% !important;
