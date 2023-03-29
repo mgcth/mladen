@@ -194,7 +194,6 @@ html {
     height: 100%;
     width: 100%;
     background: #fafafa;
-
     overflow-y: scroll;
     overflow-x: hidden;
     scrollbar-width: none;
@@ -217,8 +216,6 @@ body {
     font-family: "Source Sans Pro", sans-serif;
     font-style: normal;
     font-weight: 300;
-    font-size: 75%;
-    /* Reset to 12px from the usual 16px */
 }
 
 /* End HTML and BODY */
@@ -349,10 +346,10 @@ body {
     margin: 0 auto;
     padding: 0;
     perspective: 1000px;
-    /*transform-style: preserve-3d;*/
-    /*hyphens: auto;
-  hyphenate-limit-lines: 2;
-  hyphenate-limit-chars: 6 3 2;*/
+    /*transform-style: preserve-3d;
+    hyphens: auto;
+    hyphenate-limit-lines: 2;
+    hyphenate-limit-chars: 6 3 2;*/
 }
 
 .main .page {
@@ -367,7 +364,7 @@ body {
     margin: 0;
     padding: 0;
     /*perspective: 150px;
-  perspective-origin: 50% bottom;*/
+    perspective-origin: 50% bottom;*/
 }
 
 .main .ajax_content {
@@ -387,42 +384,6 @@ body {
 
 /* End Common */
 
-/* Home */
-.main .home-page {
-    margin: 0 auto;
-    padding: 0 40px;
-    min-width: 160px;
-    max-width: 860px;
-    position: relative;
-}
-
-.main .home-page::before {
-    content: "";
-}
-
-.main .home-page h1 {
-    text-transform: lowercase;
-}
-
-.main #page_home {
-    /*background: url(http://mladen.gibanica.net/images/IMG_0976_blur.jpg) fixed 50% / cover;*/
-    /*background: url(http://mladen.gibanica.net/images/a_c_clarke_city_and_the_stars.jpg) fixed 50% / cover;*/
-}
-
-.main #page_home .home-page-image-details {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-}
-
-#page_home section,
-#page_home .home-page-image-details {
-    padding: 20px;
-    background: rgba(250, 250, 250, 0.8);
-}
-
-/* End Home */
-
 /* Tiles */
 .main .hentry {
     /* font-weight: 300; */
@@ -439,30 +400,14 @@ body {
     right: -5%;
     width: 110%;
     /*-webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -ms-filter: blur(5px);
-  -o-filter: blur(5px);
-  filter: blur(5px);
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');*/
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');*/
     opacity: 0.5;
     transition: all 1s;
 }
-
-/*.main .background-image-container::after {
-  content: "";
-  display: block;
-  position: absolute;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background: #fafafa;
-  opacity: 0;
-  /*margin-top: 100%;*/
-/*transform: translateZ(0);
-  transition: all 0.25s;
-}*/
 
 .main .background-image-container {
     display: block;
@@ -475,11 +420,6 @@ body {
     z-index: -1;
 }
 
-/*.main ol li:hover .background-image-container::after {
-  margin-top: 0;
-  opacity: 0.2;
-  transform: translateZ(0);
-}*/
 .main ol li:hover .background-image {
     width: 100%;
     left: 0;
@@ -846,30 +786,6 @@ dl dd[data-list]::after {
     justify-content: space-between;
     align-items: center;
 }
-
-/*.list-style-tiles[data-list]::after {
-    content: attr(data-list);
-    position: absolute;
-    color: #000000;
-    text-transform: uppercase;
-    border-radius: 0;
-    margin: 0 auto;
-    opacity: 0.5;
-    z-index: -1;
-  }
-
-  ol.ordered-list li[data-list]::after {
-    padding: 0;
-    justify-content: center;
-    font-size: 1.6em;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    opacity: 0.5;
-  } */
 
 .list-item {
     display: block;
