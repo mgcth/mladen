@@ -896,7 +896,7 @@ code[class*="language-"] {
         padding: 0 20px;
     }
 
-    .main {
+    .main p {
         font-size: 1em;
         /*line-height: 1.5em;*/
     }
