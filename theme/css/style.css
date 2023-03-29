@@ -527,14 +527,6 @@ article .article-content .article_body>h6 {
     hyphens: auto;
 }
 
-.footer-box {
-    margin: 0 auto;
-    position: relative;
-    min-width: 160px;
-    max-width: 860px;
-    padding: 0 40px;
-}
-
 .main #post-list {
     margin: 0 auto 60px;
     font-size: 83.3%;
@@ -776,101 +768,7 @@ dl dd[data-list]::after {
     align-items: center;
 }
 
-.list-item-box {
-    margin: 0 auto;
-    padding: 0 40px;
-    min-width: 160px;
-    max-width: 860px;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.list-item {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
-}
-
-.list-item-text {
-    margin: 0;
-    padding: 20px 0;
-    display: block;
-}
-
-.list-item-help {
-    margin: 0;
-    text-align: right;
-    padding: 20px 0;
-    display: block;
-    min-width: 100px;
-}
-
-.list-item-text.archives {
-    padding: 20px 80px 20px 20px;
-}
-
 /* End Lists */
-
-/* Archives Menu */
-#archives_nav {
-    margin: 0 auto;
-    position: relative;
-    padding: 0 40px;
-    min-width: 160px;
-    max-width: 860px;
-}
-
-.archives_nav {
-    position: absolute;
-    text-transform: uppercase;
-    z-index: 1;
-    font-size: 1.4em;
-    top: -80px;
-    right: 40px;
-    margin: 0 auto;
-    padding: 0;
-    /*box-shadow: 0 0 15px rgba(0,0,0,0.1);*/
-}
-
-.archives_nav ul {
-    display: block;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    list-style: none;
-}
-
-.archives_nav li {
-    display: block;
-    float: left;
-    color: #000000;
-    background: #f0f0f0;
-}
-
-.archives_nav a,
-.archives_nav a:visited {
-    display: block;
-    color: #000000;
-    background: #f0f0f0;
-    padding: 15px;
-}
-
-.archives_nav a:hover,
-.archives_nav a:hover.activeMenu {
-    color: #f0f0f0;
-    background: #000000;
-}
-
-.archives_nav a.activeMenu {
-    display: block;
-    background: #000000;
-    color: #f0f0f0;
-}
-
-/* End Archives Menu */
 /* End Main */
 
 /*Special menu fix*/
@@ -913,8 +811,8 @@ dl dd[data-list]::after {
     }
 
     .main .page {
-        padding: 75px 0 0 0;
-        height: calc(100% - 75px);
+        padding: 80px 0 0 0;
+        height: calc(100% - 80px);
     }
 
     .main .entry-content {
@@ -944,8 +842,8 @@ dl dd[data-list]::after {
     }
 
     #nav {
-        top: 20px;
-        left: 20px;
+        top: 10px;
+        left: 10px;
     }
 
     #nav li {
@@ -968,7 +866,7 @@ dl dd[data-list]::after {
     }
 
     .main .home-page {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .main ol {
@@ -991,15 +889,15 @@ dl dd[data-list]::after {
     }
 
     .main .entry-content {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .main .entry-content-page {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .main .entry-content-page-title {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .main p {
@@ -1032,11 +930,11 @@ dl dd[data-list]::after {
     }
 
     .main .article header {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     article .article-content>.article_body {
-        padding: 20px;
+        padding: 20px 10px;
     }
 
     article .article-content .article_body>h2,
@@ -1045,10 +943,6 @@ dl dd[data-list]::after {
     article .article-content .article_body>h5,
     article .article-content .article_body>h6 {
         padding: 20px 0 0;
-    }
-
-    .footer-box {
-        padding: 0 20px;
     }
 
     .main #post-list .published {
@@ -1060,35 +954,15 @@ dl dd[data-list]::after {
     }
 
     ul.unordered-list li[data-list]::after {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     dl dt {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     dl dd[data-list]::after {
-        padding: 0 20px 0 !important;
-    }
-
-    .list-item-box {
-        padding: 0 20px;
-    }
-
-    .list-item-text {
-        padding: 20px 80px 20px 20px;
-    }
-
-    .list-item-text.archives {
-        padding: 20px 130px 20px 20px;
-    }
-
-    #archives_nav {
-        padding: 0 20px;
-    }
-
-    .archives_nav {
-        right: 20px;
+        padding: 0 10px 0 !important;
     }
 }
 
