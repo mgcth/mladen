@@ -790,6 +790,10 @@ dl dd[data-list]::after {
 
 /* Account for mobile devices and the "largest" reported device-width was 414px on iPhone 6 Plus*/
 @media screen and (max-width: 490px) {
+    body {
+        font-size: 75%;
+    }
+
     #nav {
         top: 20px;
         left: 20px;
@@ -873,6 +877,10 @@ dl dd[data-list]::after {
         padding: 0 20px;
     }
 
+    article .article-content>.article_body {
+        padding: 20px;
+    }
+
     article .article-content .article_body>h2,
     article .article-content .article_body>h3,
     article .article-content .article_body>h4,
@@ -903,6 +911,9 @@ dl dd[data-list]::after {
 }
 
 @media screen and (max-width: 415px) {
+    body {
+        font-size: 75%;
+    }
 
     noscript,
     .old-browsers {
