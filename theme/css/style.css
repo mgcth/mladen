@@ -789,14 +789,11 @@ dl dd[data-list]::after {
 }
 
 /* Account for mobile devices and the "largest" reported device-width was 414px on iPhone 6 Plus*/
-@media screen and (max-width: 490px) {
-    body {
-        font-size: 75%;
-    }
-
+@media screen and (max-width: 550px) {
     #nav {
         top: 20px;
         left: 20px;
+        font-size: 87.5%;
     }
 
     #nav li {
@@ -886,7 +883,7 @@ dl dd[data-list]::after {
     article .article-content .article_body>h4,
     article .article-content .article_body>h5,
     article .article-content .article_body>h6 {
-        padding: 20px 0 0;
+        padding: 10px 0 0;
     }
 
     .main #post-list .published {
@@ -908,12 +905,13 @@ dl dd[data-list]::after {
     dl dd[data-list]::after {
         padding: 0 20px 0 !important;
     }
+
+    pre {
+        font-size: 1em;
+    }
 }
 
 @media screen and (max-width: 415px) {
-    body {
-        font-size: 75%;
-    }
 
     noscript,
     .old-browsers {
@@ -929,6 +927,7 @@ dl dd[data-list]::after {
     #nav {
         top: 10px;
         left: 10px;
+        font-size: 87.5%;
     }
 
     #nav li {
@@ -1010,7 +1009,7 @@ dl dd[data-list]::after {
     }
 
     article .article-content>.article_body {
-        padding: 20px 10px;
+        padding: 10px;
     }
 
     article .article-content .article_body>h2,
@@ -1018,7 +1017,7 @@ dl dd[data-list]::after {
     article .article-content .article_body>h4,
     article .article-content .article_body>h5,
     article .article-content .article_body>h6 {
-        padding: 20px 0 0;
+        padding: 0;
     }
 
     .main #post-list .published {
@@ -1039,6 +1038,10 @@ dl dd[data-list]::after {
 
     dl dd[data-list]::after {
         padding: 0 10px 0 !important;
+    }
+
+    pre {
+        font-size: 1em;
     }
 }
 
@@ -1116,7 +1119,7 @@ p>code {
     min-width: 160px;
     max-width: 860px;
     margin: 0 auto;
-    padding: 0 !important;
+    padding: 0 2px !important;
     line-height: 1.4;
     background: #efeffe;
 }
