@@ -180,7 +180,7 @@ which will output
 ```
 
 This only gives us the 19 stations that are measuring
-global irradiance. To increase the spatial resolution,
+global irradiance. To increase the spatial resolution
 we could instead use the STRÅNG API which is a simulation
 model of the global irradiance. We can use it as
 
