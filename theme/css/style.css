@@ -972,6 +972,16 @@ article .article-content .article_body > h6 {
     left: 20px;
   }
 
+  #nav li {
+    height: 45px;
+    padding: 0 15px;
+  }
+
+  #nav li a {
+    height: 45px;
+    padding: 0 15px;
+  }
+
   .main .page {
     padding: 100px 0 0 0;
     height: calc(100% - 100px);
@@ -1095,6 +1105,46 @@ article .article-content .article_body > h6 {
   .archives_nav {
     right: 20px;
   }
+}
+
+@media screen and (max-width: 310px) {
+    noscript, .old-browsers {
+      font-size: 1em;
+      padding: 3px 0;
+    }
+
+    .article-image figure{
+      margin: -100px 0 0;
+      padding: 0;
+    }
+
+    #nav {
+      top: 10px;
+      left: 10px;
+    }
+
+    #nav li {
+        height: 40px;
+        padding: 0 10px;
+    }
+
+    #nav li a {
+        height: 40px;
+        padding: 0 10px;
+    }
+
+    .main .page {
+      padding: 50px 0 0 0;
+      height: calc(100% - 50px);
+    }
+
+    .main .home-page {
+      padding: 0 10px;
+    }
+
+    .main ol {
+      max-width: calc(100% - 40px);
+    }
 }
 /* End Account for mobile devices ... */
 
