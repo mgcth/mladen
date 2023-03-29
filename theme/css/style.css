@@ -907,7 +907,7 @@ dl dd[data-list]::after {
     }
 
     pre {
-        font-size: 1em;
+        font-size: 1em !important;
     }
 }
 
@@ -1041,7 +1041,7 @@ dl dd[data-list]::after {
     }
 
     pre {
-        font-size: 1em;
+        font-size: 1em !important;
     }
 }
 
