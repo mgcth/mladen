@@ -180,7 +180,7 @@ which will output
 ```
 
 This only gives us the 19 stations that are measuring
-global irradiance. To increase the spatial resolution,
+global irradiance. To increase the spatial resolution
 we could instead use the STRÅNG API which is a simulation
 model of the global irradiance. We can use it as
 
@@ -257,7 +257,10 @@ fig.add_trace(
         y=data["lat"],
         mode="markers",
         name="Global irradiance 1999-01-01 daily",
-        marker={"color": data["Global irradiance [W/m²] 1999-01-01T00:00:00+00:00 daily"]},
+        marker={
+          "color": data["Global irradiance [W/m²] 1999-01-01T00:00:00+00:00 daily"],
+          "colorbar": {"title": "[W/m²]"},
+        },
     )
 )
 fig.update_layout(
@@ -267,6 +270,10 @@ fig.update_layout(
     legend={"orientation": "h"},
     margin={"l": 0, "r": 0, "b": 80, "t": 100},
     paper_bgcolor="rgba(250, 250, 250, 1)",
+)
+fig.update_yaxes(
+    scaleanchor="x",
+    scaleratio=1,
 )
 fig.show()
 ```
