@@ -23,7 +23,6 @@
     <!-- End font loading -->
     <!-- Load CSS -->
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
     <noscript>
         <link rel="stylesheet" type="text/css" href="/css/noscript_style.css" />
     </noscript>
@@ -115,7 +114,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/bash.min.js"
             integrity="sha512-yyMT1pQvQ9ZFAB8j/dUWeEjWTEQZBmV9pitXN7fmJYbqsoizQ0kVw8wONhrwBHE0Z/S8tKQyRcvbW4pG4m5cIw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script>hljs.highlightAll();</script>
         <!-- End Load Highlight -->
         <!-- Load MathJax -->
         <script type="text/x-mathjax-config">
@@ -177,7 +175,7 @@
                 hljs.configure({
                     tabReplace: '    ', // 4 spaces
                 });
-                hljs.initHighlighting();
+                hljs.highlightAll();
                 //MathJax.Hub.Typeset();
             });
             // End Page end
