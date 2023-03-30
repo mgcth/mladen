@@ -983,6 +983,7 @@ code[class*="language-"] {
     #nav li a {
         height: 40px;
         padding: 0 10px;
+        font-size: 85.71%;
     }
 
     .nav #menu-icon {
