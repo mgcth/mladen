@@ -271,6 +271,10 @@ fig.update_layout(
     margin={"l": 0, "r": 0, "b": 80, "t": 100},
     paper_bgcolor="rgba(250, 250, 250, 1)",
 )
+fig.update_yaxes(
+    scaleanchor="x",
+    scaleratio=1,
+)
 fig.show()
 ```
 
