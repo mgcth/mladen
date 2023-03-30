@@ -8,8 +8,8 @@ status: published
 
 <h2 style="margin: 40px 0; font-weight: 400;">My name is Mladen Gibanica.</h2>
 
-I am a Senior Data Scientist at Volvo Cars and Co-founder of
-<a href="https://github.com/Ingenjorsarbete-For-Klimatet" target="_blank">Ingenjörsarbete För Klimatet (IFK)</a>.
+I am a Senior Data Scientist at Volvo Cars and founding member of
+<a href="https://github.com/Ingenjorsarbete-For-Klimatet" target="_blank">Ingenjörsarbete för Klimatet (IFK)</a>.
 My background is in Dynamics; more specifically I have a
 <a href="https://research.chalmers.se/en/publication/514656" target="_blank">PhD in identification of dynamical systems</a>.
 You can find my publicly available work on
