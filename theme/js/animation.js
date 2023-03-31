@@ -25,36 +25,23 @@ function animatePage(whichFrame) {
       allPages[j - 1].style.display = "block";
       allPages[j - 1].style.zIndex = 0;
 
-      if ($("#page_" + pages[j - 1] + ":visible").length == 0) {
-        $("#page_" + pages[j - 1])
-          .delay(0)
-          .queue(function (next) {
-            $(this).css({
-              opacity: 1,
-              transform: "translateX(0) translateY(0) translateZ(0)",
-              transition: "all " + animationPageDuration + "ms",
-            });
-            next();
+      $("#page_" + pages[j - 1])
+        .delay(0)
+        .queue(function (next) {
+          $(this).css({
+            opacity: 1,
+            transform: "translateX(0) translateY(0) translateZ(0)",
+            transition: "all " + animationPageDuration + "ms",
           });
-      } else {
-        $("#page_" + pages[j - 1])
-          .delay(0)
-          .queue(function (next) {
-            $(this).css({
-              opacity: 1,
-              transform: "translateX(0) translateY(0) translateZ(0)",
-              transition: "all " + animationPageDuration + "ms",
-            });
-            next();
-          });
-      }
+          next();
+        });
 
       const navUlLiA = document.querySelectorAll("#nav ul li a");
-      navUlLiA.classList.remove("activeMenu");
+      navUlLiA.forEach((e) => e.classList.remove("activeMenu"));
       const navUlLinth = document.querySelectorAll(
         "#nav ul li:nth-child(" + (whichFrame + 1) + ") a"
       );
-      navUlLinth.classList.add("activeMenu");
+      navUlLinth.forEach((e) => e.classList.add("activeMenu"));
     } else if (whichFrame > j) {
       $("#page_" + pages[j - 1]).css({
         opacity: 0,
