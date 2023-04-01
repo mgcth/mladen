@@ -55,7 +55,7 @@ function animatePage(whichFrame) {
       hideCounter++;
     } else {
       let opacityValue = (1 / (j - whichFrame)) * 0.1;
-      if (document.querySelectorAll("#main .page:nth-child(" + j + "):visible").length == 0) {
+      if (document.querySelectorAll("#main .page:nth-child(" + j + ")")[0].style.display == "none") {
         allPages[j - 1].style.opacity = opacityValue;
         allPages[j - 1].style.transform = "translateX(0) translateY(0) translateZ(" +
             zDisplacement * (whichFrame - j) +
