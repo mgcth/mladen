@@ -63,9 +63,6 @@ document.querySelector("nav #menu-icon").addEventListener("click", (e) => {
 });
 
 document.addEventListener("click", (e) => {
-  console.log(e)
-  console.log(e.target)
-  console.log(e.target.closest("#nav"))
   if (!e.target.closest("#nav")) {
     fadeOutNav();
   }
