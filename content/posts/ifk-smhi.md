@@ -139,7 +139,7 @@ fig.show()
 </details>
 
 <iframe id="igraph"
-alt="Historic data of air temperature in Göteborg A, from SMHI"
+alt="Historic data of daily mean air temperature in Göteborg A, from SMHI"
 scrolling="no" style="border:none;" seamless="seamless"
 src="{{post_url}}/data/air_temperature_gothenburg_a.html" height="525" width="100%">
 </iframe>
@@ -281,7 +281,7 @@ fig.show()
 </details>
 
 <iframe id="igraph"
-alt="Historic data of air temperature in Göteborg A, from SMHI"
+alt="Global irradiance 1999-01-01 daily over Sweden, from SMHI"
 scrolling="no" style="border:none;" seamless="seamless"
 src="{{post_url}}/data/global_irradiance.html" height="525" width="100%">
 </iframe>
