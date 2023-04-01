@@ -89,11 +89,11 @@ if (window.history && history.pushState) {
         // Create variables to save
         var linkItem = whichPageActive;
         for (var i = 1; i <= pages.length; i++) {
-          if (link.attributes.title == pages[i - 1]) {
+          if (link.title == pages[i - 1]) {
             linkItem = i;
           }
         }
-        var menuUrl = link.href;
+        var menuUrl = link.attributes.href.nodeValue;
 
         // Perform the loading and update history
         doPushState(linkItem, menuUrl, false);
@@ -113,9 +113,9 @@ if (window.history && history.pushState) {
   document.querySelector("#main").addEventListener("click", (e) => {
     if (e.target && !!e.target.closest("A")) {
       const link = e.target.closest("A");
-      if (link.attributes.target == "_blank") {
+      if (link.target == "_blank") {
         // Do nothing for external links
-      } else if (link.attributes.href[0] == "#") {
+      } else if (link.attributes.href.nodeValue[0] == "#") {
         // Do nothing for hash links
       } else {
         // Prevent default action if internal link
@@ -125,7 +125,7 @@ if (window.history && history.pushState) {
         if (isClicked == false) {
           // Create variables to save
           var linkItem = whichPageActive;
-          var menuUrl = link.href;
+          var menuUrl = link.attributes.href.nodeValue;
 
           // Perform the loading and update history
           doPushState(linkItem, menuUrl, false);
