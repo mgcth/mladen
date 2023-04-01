@@ -43,33 +43,33 @@ function animatePage(whichFrame) {
       );
       navUlLinth.forEach((e) => e.classList.add("activeMenu"));
     } else if (whichFrame > j) {
-      all_pages[j - 1].style.opcaity = 0;
-      all_pages[j - 1].style.transform =
+      allPages[j - 1].style.opcaity = 0;
+      allPages[j - 1].style.transform =
         "translateX(0) translateY(0) translateZ(" +
         zDisplacement * (whichFrame - j) +
         "px)";
-      all_pages[j - 1].style.transition = "all " + animationPageDuration + "ms";
-      all_pages[j - 1].style.zIndex = -whichFrame + j - 1;
+      allPages[j - 1].style.transition = "all " + animationPageDuration + "ms";
+      allPages[j - 1].style.zIndex = -whichFrame + j - 1;
 
       hide[hideCounter] = "#page_" + pages[j - 1];
       hideCounter++;
     } else {
       let opacityValue = (1 / (j - whichFrame)) * 0.1;
       if (document.querySelectorAll("#main .page:nth-child(" + j + "):visible").length == 0) {
-        all_pages[j - 1].style.opacity = opacityValue;
-        all_pages[j - 1].style.transform = "translateX(0) translateY(0) translateZ(" +
+        allPages[j - 1].style.opacity = opacityValue;
+        allPages[j - 1].style.transform = "translateX(0) translateY(0) translateZ(" +
             zDisplacement * (whichFrame - j) +
             "px)";
-          all_pages[j - 1].style.transition = "all " + animationPageDuration + "ms";
+          allPages[j - 1].style.transition = "all " + animationPageDuration + "ms";
       } else {
-        all_pages[j - 1].style.opacity = opacityValue;
-        all_pages[j - 1].style.transform = "translateX(0) translateY(0) translateZ(" +
+        allPages[j - 1].style.opacity = opacityValue;
+        allPages[j - 1].style.transform = "translateX(0) translateY(0) translateZ(" +
             zDisplacement * (whichFrame - j) +
             "px)";
-        all_pages[j - 1].style.transition = "all " + animationPageDuration + "ms";
+        allPages[j - 1].style.transition = "all " + animationPageDuration + "ms";
       }
 
-      all_pages[j - 1].style.zIndex = -(j - 1 + 1);
+      allPages[j - 1].style.zIndex = -(j - 1 + 1);
 
       hide[hideCounter] = "#page_" + pages[j - 1];
       hideCounter++;
