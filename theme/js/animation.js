@@ -10,7 +10,7 @@ const zDisplacement = 100;
 // Number of pages
 const allPages = document.querySelectorAll("#main .page");
 
-function setStyle(opacity, transform, transition) {
+function setStyle(j, opacity, transform, transition) {
   allPages[j - 1].style.opacity = opacity;
   allPages[j - 1].style.transform = transform;
   allPages[j - 1].style.transition = transition;
@@ -32,6 +32,7 @@ function animatePage(whichFrame) {
 
       setTimeout(() => {
         setStyle(
+          j,
           0,
           "translateX(0) translateY(0) translateZ(0)",
           "all " + animationPageDuration + "ms"
@@ -46,6 +47,7 @@ function animatePage(whichFrame) {
         .forEach((e) => e.classList.add("activeMenu"));
     } else if (whichFrame > j) {
       setStyle(
+        j,
         0,
         "translateX(0) translateY(0) translateZ(" +
           zDisplacement * (whichFrame - j) +
@@ -59,6 +61,7 @@ function animatePage(whichFrame) {
     } else {
       let opacityValue = (1 / (j - whichFrame)) * 0.1;
       setStyle(
+        j,
         (1 / (j - whichFrame)) * 0.1,
         "translateX(0) translateY(0) translateZ(" +
           zDisplacement * (whichFrame - j) +
