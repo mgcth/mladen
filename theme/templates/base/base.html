@@ -48,7 +48,7 @@
 
         <!-- Load and Share data -->
         <script type="text/javascript">
-            // Pageload (avoid jQuery so it can be load after)
+            // Pageload
             var loadingDOM = document.getElementById("loading");
             loadingDOM.style.display = "flex";
             // End Pageload
@@ -61,10 +61,6 @@
             var pages = {{ js_menu }};
         </script>
         <!-- End Load and Share data -->
-
-        <!-- Load jQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <!-- End Load jQuery -->
     </div>
 
     <nav id="nav" class="nav">
@@ -101,10 +97,6 @@
     </main>
 
     <div class="dummyJS">
-        <!-- Load Prefixfree -->
-        <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-        <!-- End Load Prefixfree -->
         <!-- Load Highlight -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/julia.min.js"></script>
@@ -151,24 +143,16 @@
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
         <!-- End Load MathJax -->
-        <!-- Load three.js -->
-        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js"></script>
-        <script>window.processing || document.write('<script type="text/javascript" src="/threejs/r68/three.min.js">\x3C/script>')</script> -->
-        <!-- End Load three.js -->
         <!-- Load Site scripts -->
         <script type="text/javascript" src="/js/site_script.js"></script>
         <script type="text/javascript" src="/js/animation.js"></script>
         <script type="text/javascript" src="/js/navigation.js"></script>
         <!-- End Load Site scripts -->
 
-        <!-- Load Graphics -->
-        <!-- <script src="/graphics/graphics_01.js"></script> -->
-        <!-- End Load Graphics -->
-
         <!-- Pageload continue and Page end -->
         <script type="text/javascript">
             // Page end
-            $(document).ready(function () {
+            window.addEventListener('DOMContentLoaded', (e) => {
                 // Initial style of the frames
                 animatePage(whichPageActive);
 
@@ -182,17 +166,15 @@
 
             // Pageload continue
             // When loaded, fade out loading div
-            $(window).load(function () {
-                $('#loading').css({
-                    "opacity": 0,
-                    "transform": "translateZ(0)",
-                    "transition": "all " + 500 + "ms"
-                });
+            window.addEventListener('load', (e) => {
+                const loading = document.querySelector("#loading")
+                loading.style.opacity = 0;
+                loading.style.transform = "translateZ(0)";
+                loading.style.transition = "all " + 500 + "ms";
 
-                $("#loading").delay(500).queue(function (next) {
-                    $(this).css({ "display": "none" });
-                    next();
-                });
+                setTimeout(() => {
+                    loading.style.display = "none"
+                }, 500);
             });
             // End Pageload continue
         </script>
