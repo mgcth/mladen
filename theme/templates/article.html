@@ -23,7 +23,14 @@
         <div id="page_{{title}}" class="page" {% if title !=pageName %}style="display: none" {% endif %}>
             <div id="content_{{title}}" class="content {% if title == " pageName" %}ajaxHook{% endif %}">
                 <script>
-                    $("#content_{{title}}").load("/{{ link }} #ajax_content_{{title}}");
+                    fetch("/{{ link }}")
+                      .then((response) => {
+                        return response.text();
+                      })
+                      .then((body) => {
+                        const parsed = new DOMParser().parseFromString(body, "text/html");
+                        document.querySelector("#content_{{title}}").innerHTML = parsed.querySelector("#ajax_content_{{title}}").outerHTML;
+                      });
                 </script>
             </div>
         </div>

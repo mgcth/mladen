@@ -29,12 +29,6 @@ function setLinkState(linkItem, menuUrl) {
   linkState.url = menuUrl;
 }
 
-async function fetchElement(url, selector) {
-  const data = await fetch(url).then((res) => res.text());
-  const parsed = new DOMParser().parseFromString(data, "text/html");
-  return parsed.querySelector(selector);
-}
-
 async function doPushState(linkItem, menuUrl, poper) {
   var state = { item: linkItem, url: menuUrl },
     title = "",
@@ -58,9 +52,16 @@ async function doPushState(linkItem, menuUrl, poper) {
       query.transform = "translateZ(0)";
       query.transition = "all " + animationPageDuration + "ms";
     }
-    const data = await fetchElement(path, ".ajaxHook");
-    document.querySelector("#page_" + pages[linkItem - 1]).innerHTML =
-      data.outerHTML;
+
+    fetch(path)
+      .then((response) => {
+        return response.text();
+      })
+      .then((body) => {
+        const parsed = new DOMParser().parseFromString(body, "text/html");
+        document.querySelector("#page_" + pages[linkItem - 1]).innerHTML =
+          parsed.querySelector(".ajaxHook").outerHTML;
+      });
   }
 
   // If a real link event, update history

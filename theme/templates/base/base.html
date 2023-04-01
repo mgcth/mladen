@@ -48,7 +48,7 @@
 
         <!-- Load and Share data -->
         <script type="text/javascript">
-            // Pageload (avoid jQuery so it can be load after)
+            // Pageload
             var loadingDOM = document.getElementById("loading");
             loadingDOM.style.display = "flex";
             // End Pageload
@@ -61,10 +61,6 @@
             var pages = {{ js_menu }};
         </script>
         <!-- End Load and Share data -->
-
-        <!-- Load jQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <!-- End Load jQuery -->
     </div>
 
     <nav id="nav" class="nav">
@@ -168,7 +164,7 @@
         <!-- Pageload continue and Page end -->
         <script type="text/javascript">
             // Page end
-            $(document).ready(function () {
+            window.addEventListener('DOMContentLoaded', (e) => {
                 // Initial style of the frames
                 animatePage(whichPageActive);
 
@@ -182,17 +178,15 @@
 
             // Pageload continue
             // When loaded, fade out loading div
-            $(window).load(function () {
-                $('#loading').css({
-                    "opacity": 0,
-                    "transform": "translateZ(0)",
-                    "transition": "all " + 500 + "ms"
-                });
+            window.addEventListener('load', (e) => {
+                const loading = document.querySelector("#loading")
+                loading.style.opacity = 0;
+                loading.style.transform = "translateZ(0)";
+                loading.style.transition = "all " + 500 + "ms";
 
-                $("#loading").delay(500).queue(function (next) {
-                    $(this).css({ "display": "none" });
-                    next();
-                });
+                setTimeout(() => {
+                    loading.style.display = "none"
+                }, 500);
             });
             // End Pageload continue
         </script>
