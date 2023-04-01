@@ -55,11 +55,24 @@ function animatePage(whichFrame) {
       hideCounter++;
     } else {
       let opacityValue = (1 / (j - whichFrame)) * 0.1;
-      allPages[j - 1].style.opacity = opacityValue;
-      allPages[j - 1].style.transform = "translateX(0) translateY(0) translateZ(" +
+      if ($("#main .page:nth-child(" + j + "):visible").length == 0) {
+        allPages[j - 1].style.opacity = opacityValue;
+        allPages[j - 1].style.transform =
+          "translateX(0) translateY(0) translateZ(" +
           zDisplacement * (whichFrame - j) +
           "px)";
-      allPages[j - 1].style.transition = "all " + animationPageDuration + "ms";
+        allPages[j - 1].style.transition =
+          "all " + animationPageDuration + "ms";
+      } else {
+        allPages[j - 1].style.opacity = opacityValue;
+        allPages[j - 1].style.transform =
+          "translateX(0) translateY(0) translateZ(" +
+          zDisplacement * (whichFrame - j) +
+          "px)";
+        allPages[j - 1].style.transition =
+          "all " + animationPageDuration + "ms";
+      }
+
       allPages[j - 1].style.zIndex = -(j - 1 + 1);
 
       hide[hideCounter] = "#page_" + pages[j - 1];
@@ -70,7 +83,9 @@ function animatePage(whichFrame) {
   hidePages = hide.join(", ");
 
   animationTimeout = setTimeout(function () {
-    document.querySelectorAll(hidePages).forEach((e) => e.style.display = "none" );
+    document
+      .querySelectorAll(hidePages)
+      .forEach((e) => (e.style.display = "none"));
     document.querySelector("html").classList.remove("hide_scroll");
   }, animationPageDuration);
 }
