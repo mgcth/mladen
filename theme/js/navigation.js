@@ -93,7 +93,7 @@ if (window.history && history.pushState) {
             linkItem = i;
           }
         }
-        var menuUrl = link.attributes.href;
+        var menuUrl = link.href;
 
         // Perform the loading and update history
         doPushState(linkItem, menuUrl, false);
@@ -113,7 +113,7 @@ if (window.history && history.pushState) {
   document.querySelector("#main").addEventListener("click", (e) => {
     if (e.target && !!e.target.closest("A")) {
       const link = e.target.closest("A");
-      if (link.target == "_blank") {
+      if (link.attributes.target == "_blank") {
         // Do nothing for external links
       } else if (link.attributes.href[0] == "#") {
         // Do nothing for hash links
@@ -125,7 +125,7 @@ if (window.history && history.pushState) {
         if (isClicked == false) {
           // Create variables to save
           var linkItem = whichPageActive;
-          var menuUrl = link.attributes.href;
+          var menuUrl = link.href;
 
           // Perform the loading and update history
           doPushState(linkItem, menuUrl, false);
