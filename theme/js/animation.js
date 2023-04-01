@@ -1,11 +1,11 @@
 // Animation.js
 // Set the transition time
-var animationPageDuration = 250;
+const animationPageDuration = 250;
 var animationTimeout;
 var hidePages = [""];
 
 // Set the z displacement
-var zDisplacement = 100;
+const zDisplacement = 100;
 
 // Number of pages
 const allPages = document.querySelectorAll("#main .page");
@@ -17,10 +17,10 @@ function animatePage(whichFrame) {
 
   whichPageActive = whichFrame;
 
-  var hideCounter = 0;
-  var hide = [""];
+  let hideCounter = 0;
+  let hide = [""];
 
-  for (var j = 1; j <= allPages.length; j++) {
+  for (let j = 1; j <= allPages.length; j++) {
     if (whichFrame == j) {
       allPages[j - 1].style.display = "block";
       allPages[j - 1].style.zIndex = 0;
@@ -43,44 +43,34 @@ function animatePage(whichFrame) {
       );
       navUlLinth.forEach((e) => e.classList.add("activeMenu"));
     } else if (whichFrame > j) {
-      $("#page_" + pages[j - 1]).css({
-        opacity: 0,
-        transform:
-          "translateX(0) translateY(0) translateZ(" +
-          zDisplacement * (whichFrame - j) +
-          "px)",
-        transition: "all " + animationPageDuration + "ms",
-      });
-
-      $("#page_" + pages[j - 1]).css({ "z-index": -whichFrame + j - 1 });
+      all_pages[j - 1].style.opcaity = 0;
+      all_pages[j - 1].style.transform =
+        "translateX(0) translateY(0) translateZ(" +
+        zDisplacement * (whichFrame - j) +
+        "px)";
+      all_pages[j - 1].style.transition = "all " + animationPageDuration + "ms";
+      all_pages[j - 1].style.zIndex = -whichFrame + j - 1;
 
       hide[hideCounter] = "#page_" + pages[j - 1];
       hideCounter++;
     } else {
-      var opacityValue = (1 / (j - whichFrame)) * 0.1;
-      if ($("#main .page:nth-child(" + j + "):visible").length == 0) {
-        $("#page_" + pages[j - 1]).css({
-          opacity: opacityValue,
-          transform:
-            "translateX(0) translateY(0) translateZ(" +
+      let opacityValue = (1 / (j - whichFrame)) * 0.1;
+      if (document.querySelectorAll("#main .page:nth-child(" + j + "):visible").length == 0) {
+        all_pages[j - 1].style.opacity = opacityValue;
+        all_pages[j - 1].style.transform = "translateX(0) translateY(0) translateZ(" +
             zDisplacement * (whichFrame - j) +
-            "px)",
-          transition: "all " + animationPageDuration + "ms",
-        });
+            "px)";
+          all_pages[j - 1].style.transition = "all " + animationPageDuration + "ms";
       } else {
-        $("#page_" + pages[j - 1]).css({
-          opacity: opacityValue,
-          transform:
-            "translateX(0) translateY(0) translateZ(" +
+        all_pages[j - 1].style.opacity = opacityValue;
+        all_pages[j - 1].style.transform = "translateX(0) translateY(0) translateZ(" +
             zDisplacement * (whichFrame - j) +
-            "px)",
-          transition: "all " + animationPageDuration + "ms",
-        });
+            "px)";
+        all_pages[j - 1].style.transition = "all " + animationPageDuration + "ms";
       }
 
-      $("#page_" + pages[j - 1]).css({ "z-index": -(j - 1 + 1) });
+      all_pages[j - 1].style.zIndex = -(j - 1 + 1);
 
-      //$("#page_" + pages[j-1]).css({"display": "block"});
       hide[hideCounter] = "#page_" + pages[j - 1];
       hideCounter++;
     }
@@ -89,8 +79,8 @@ function animatePage(whichFrame) {
   hidePages = hide.join(", ");
 
   animationTimeout = setTimeout(function () {
-    $(hidePages).css({ display: "none" });
-    $("html").removeClass("hide_scroll");
+    document.querySelectorAll(hidePages).forEach((e) => e.style.display = "none" );
+    document.querySelector("html").classList.remove("hide_scroll");
   }, animationPageDuration);
 }
 // End Animation.js
