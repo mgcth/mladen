@@ -89,11 +89,11 @@ if (window.history && history.pushState) {
         // Create variables to save
         var linkItem = whichPageActive;
         for (var i = 1; i <= pages.length; i++) {
-          if (link.title == pages[i - 1]) {
+          if (link.attributes.title == pages[i - 1]) {
             linkItem = i;
           }
         }
-        var menuUrl = link.href;
+        var menuUrl = link.attributes.href;
 
         // Perform the loading and update history
         doPushState(linkItem, menuUrl, false);
@@ -115,7 +115,7 @@ if (window.history && history.pushState) {
       const link = e.target.closest("A");
       if (link.target == "_blank") {
         // Do nothing for external links
-      } else if (link.href[0] == "#") {
+      } else if (link.attributes.href[0] == "#") {
         // Do nothing for hash links
       } else {
         // Prevent default action if internal link
@@ -125,7 +125,7 @@ if (window.history && history.pushState) {
         if (isClicked == false) {
           // Create variables to save
           var linkItem = whichPageActive;
-          var menuUrl = link.href;
+          var menuUrl = link.attributes.href;
 
           // Perform the loading and update history
           doPushState(linkItem, menuUrl, false);
