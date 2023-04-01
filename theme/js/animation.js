@@ -33,7 +33,7 @@ function animatePage(whichFrame) {
       setTimeout(() => {
         setStyle(
           j,
-          0,
+          1,
           "translateX(0) translateY(0) translateZ(0)",
           "all " + animationPageDuration + "ms"
         );
