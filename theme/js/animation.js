@@ -10,6 +10,12 @@ const zDisplacement = 100;
 // Number of pages
 const allPages = document.querySelectorAll("#main .page");
 
+function setStyle(opacity, transform, transition) {
+  allPages[j - 1].style.opacity = opacity;
+  allPages[j - 1].style.transform = transform;
+  allPages[j - 1].style.transition = transition;
+}
+
 // Function to animate the frame transitions
 function animatePage(whichFrame) {
   document.querySelector("html").classList.add("hide_scroll");
@@ -25,11 +31,11 @@ function animatePage(whichFrame) {
       allPages[j - 1].style.zIndex = 0;
 
       setTimeout(() => {
-        allPages[j - 1].style.opacity = 1;
-        allPages[j - 1].style.transform =
-          "translateX(0) translateY(0) translateZ(0)";
-        allPages[j - 1].style.transition =
-          "all " + animationPageDuration + "ms";
+        setStyle(
+          0,
+          "translateX(0) translateY(0) translateZ(0)",
+          "all " + animationPageDuration + "ms"
+        );
       }, 0);
 
       document
@@ -39,24 +45,26 @@ function animatePage(whichFrame) {
         .querySelectorAll("#nav ul li:nth-child(" + (whichFrame + 1) + ") a")
         .forEach((e) => e.classList.add("activeMenu"));
     } else if (whichFrame > j) {
-      allPages[j - 1].style.opacity = 0;
-      allPages[j - 1].style.transform =
+      setStyle(
+        0,
         "translateX(0) translateY(0) translateZ(" +
-        zDisplacement * (whichFrame - j) +
-        "px)";
-      allPages[j - 1].style.transition = "all " + animationPageDuration + "ms";
+          zDisplacement * (whichFrame - j) +
+          "px)",
+        "all " + animationPageDuration + "ms"
+      );
       allPages[j - 1].style.zIndex = -whichFrame + j - 1;
 
       hide[hideCounter] = "#page_" + pages[j - 1];
       hideCounter++;
     } else {
       let opacityValue = (1 / (j - whichFrame)) * 0.1;
-      allPages[j - 1].style.opacity = opacityValue;
-      allPages[j - 1].style.transform =
+      setStyle(
+        (1 / (j - whichFrame)) * 0.1,
         "translateX(0) translateY(0) translateZ(" +
-        zDisplacement * (whichFrame - j) +
-        "px)";
-      allPages[j - 1].style.transition = "all " + animationPageDuration + "ms";
+          zDisplacement * (whichFrame - j) +
+          "px)",
+        "all " + animationPageDuration + "ms"
+      );
       allPages[j - 1].style.zIndex = -(j - 1 + 1);
 
       hide[hideCounter] = "#page_" + pages[j - 1];
