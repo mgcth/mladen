@@ -160,7 +160,11 @@
                     tabReplace: '    ', // 4 spaces
                 });
                 hljs.highlightAll();
-                //MathJax.Hub.Typeset();
+                document.querySelectorAll("p code").forEach((block) => {
+                    hljs.highlightElement(block);
+                });
+
+                MathJax.Hub.Typeset();
             });
             // End Page end
 
