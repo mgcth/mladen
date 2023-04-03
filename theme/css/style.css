@@ -773,15 +773,7 @@ dl dd[data-list]::after {
 /* highlight.js */
 .hljs {
     background: rgba(245,242,240,0.8) !important;
-}
-
-pre {
     font-family: "Inconsolata", monospace !important;
-}
-
-p>code {
-    font-family: "Inconsolata", monospace !important;
-    padding: 0 2px !important;
 }
 
 code[class*="language-"] {

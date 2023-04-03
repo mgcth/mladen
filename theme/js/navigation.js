@@ -63,11 +63,11 @@ function doPushState(linkItem, menuUrl, poper) {
           parsed.querySelector(".ajaxHook").outerHTML;
 
         document.querySelectorAll("pre code").forEach((block) => {
-          hljs.highlightBlock(block);
+          hljs.highlightElement(block);
         });
 
-        document.querySelectorAll("p > code").forEach((block) => {
-          hljs.highlightBlock(block);
+        document.querySelectorAll("p code").forEach((block) => {
+          hljs.highlightElement(block);
         });
 
         MathJax.Hub.Typeset();
