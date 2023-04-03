@@ -26,7 +26,7 @@
     <noscript>
         <link rel="stylesheet" type="text/css" href="/css/noscript_style.css" />
     </noscript>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-light.min.css">
     <!-- End Load CSS -->
     {% endblock head %}
 </head>
@@ -160,7 +160,11 @@
                     tabReplace: '    ', // 4 spaces
                 });
                 hljs.highlightAll();
-                //MathJax.Hub.Typeset();
+                document.querySelectorAll("p code").forEach((block) => {
+                    hljs.highlightElement(block);
+                });
+
+                MathJax.Hub.Typeset();
             });
             // End Page end
 

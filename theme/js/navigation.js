@@ -29,7 +29,7 @@ function setLinkState(linkItem, menuUrl) {
   linkState.url = menuUrl;
 }
 
-async function doPushState(linkItem, menuUrl, poper) {
+function doPushState(linkItem, menuUrl, poper) {
   var state = { item: linkItem, url: menuUrl },
     title = "",
     path = menuUrl;
@@ -61,6 +61,17 @@ async function doPushState(linkItem, menuUrl, poper) {
         const parsed = new DOMParser().parseFromString(body, "text/html");
         document.querySelector("#page_" + pages[linkItem - 1]).innerHTML =
           parsed.querySelector(".ajaxHook").outerHTML;
+
+        document.querySelectorAll("pre code").forEach((block) => {
+          hljs.highlightElement(block);
+        });
+
+        document.querySelectorAll("p code").forEach((block) => {
+          hljs.highlightElement(block);
+        });
+
+        MathJax.Hub.Typeset();
+        //$(window).scrollTop(0);
       });
   }
 
