@@ -776,15 +776,12 @@ dl dd[data-list]::after {
 }
 
 pre {
-    background-color: rgba(245,242,240,0.8) !important;
     font-family: "Inconsolata", monospace !important;
 }
 
 p>code {
-    background: rgba(245,242,240,0.8) !important;
     font-family: "Inconsolata", monospace !important;
     padding: 0 2px !important;
-    color: #383a42;
 }
 
 code[class*="language-"] {
