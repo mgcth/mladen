@@ -66,6 +66,10 @@ function doPushState(linkItem, menuUrl, poper) {
           hljs.highlightBlock(block);
         });
 
+        document.querySelectorAll("p > code").forEach((block) => {
+          hljs.highlightBlock(block);
+        });
+
         MathJax.Hub.Typeset();
         //$(window).scrollTop(0);
       });
