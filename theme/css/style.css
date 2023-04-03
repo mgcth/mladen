@@ -770,16 +770,20 @@ dl dd[data-list]::after {
 /* End Lists */
 /* End Main */
 
-/* Prism Style (use of !important to overide default style ) */
+/* highlight.js */
+.hljs {
+    background: rgba(245,242,240,0.8) !important;
+}
+
 pre {
     background-color: rgba(245,242,240,0.8) !important;
     font-family: "Inconsolata", monospace !important;
 }
 
 p>code {
+    background: rgba(245,242,240,0.8) !important;
     font-family: "Inconsolata", monospace !important;
     padding: 0 2px !important;
-    background: rgba(245,242,240,0.8) !important;
     color: #383a42;
 }
 
@@ -788,7 +792,7 @@ code[class*="language-"] {
     white-space: pre-wrap;
 }
 
-/* End Prism Style */
+/* End highlight.js */
 
 .profile-image {
     width: 125px;
