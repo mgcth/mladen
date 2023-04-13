@@ -28,6 +28,7 @@ function animatePage(whichFrame) {
   for (let j = 1; j <= allPages.length; j++) {
     if (whichFrame == j) {
       allPages[j - 1].style.display = "block";
+      allPages[j - 1].style.opacity = 0;
       allPages[j - 1].style.zIndex = 0;
 
       setTimeout(() => {
@@ -37,7 +38,7 @@ function animatePage(whichFrame) {
           "translateX(0) translateY(0) translateZ(0)",
           "all " + animationPageDuration + "ms"
         );
-      }, 0);
+      }, 50);
 
       document
         .querySelectorAll("#nav ul li a")
