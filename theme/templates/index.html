@@ -4,31 +4,38 @@
 {% if menuitems %}
 {% for title, link in menuitems.items() %}
 {% if title == "home" %}
-    <div id="page_{{title}}" class="page" {% if title !=pageName %}style="display: none" {% endif %}>
-      <div id="content_{{title}}" class="content {% if title == pageName %}ajaxHook{% endif %}">
-        <div id="ajax_content_{{title.lower()}}" class="ajax_content">
-          <div class="entry-content-page hyphenate">
-            {{ pages[title+".md"].content }}
-          </div>
+        <div id="page_{{title}}" class="page" {% if title !=pageName %}style="display: none" {% endif %}>
+            <div id="content_{{title}}" class="content {% if title == pageName %}ajaxHook{% endif %}">
+                <div id="ajax_content_{{title.lower()}}" class="ajax_content">
+                    <div class="entry-content-page hyphenate">
+                        {{ pages[title+".md"].content }}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 {% else %}
-    <div id="page_{{title}}" class="page" {% if title !=pageName %}style="display: none" {% endif %}>
-      <div id="content_{{title}}" class="content {% if title == pageName %}ajaxHook{% endif %}">
-        <script>
-          $("#content_{{title}}").load("/{{ link }} #ajax_content_{{title}}");
-        </script>
-      </div>
-    </div>
+        <div id="page_{{title}}" class="page" {% if title !=pageName %}style="display: none" {% endif %}>
+            <div id="content_{{title}}" class="content {% if title == pageName %}ajaxHook{% endif %}">
+                <script>
+                    fetch("/{{ link }}")
+                      .then((response) => {
+                        return response.text();
+                      })
+                      .then((body) => {
+                        const parsed = new DOMParser().parseFromString(body, "text/html");
+                        document.querySelector("#content_{{title}}").innerHTML = parsed.querySelector("#ajax_content_{{title}}").outerHTML;
+                      });
+                </script>
+            </div>
+        </div>
 {% endif %}
 {% endfor %}
 {% endif %}
 
-<!-- Animate to page -->
-<script>
-  // Which page is this
-  whichPageActive = 1;
-</script>
-<!-- End Animate to page -->
+        <!-- Animate to page -->
+        <script>
+            // Which page is this
+            whichPageActive = 1;
+        </script>
+        <!-- End Animate to page -->
 {% endblock content %}

@@ -3,8 +3,6 @@ date: 2020-08-25
 author: Mladen Gibanica
 category: Projects
 tags: julia, system identification
-type: 
-image: 
 status: published
 
 I have, together with Tomas McKelvey, implemented the Julia version of fsid, a frequency-domain N4SID system identification algorithm.

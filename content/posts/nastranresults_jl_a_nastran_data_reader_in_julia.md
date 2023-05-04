@@ -3,8 +3,6 @@ date: 2018-06-13
 author: Mladen Gibanica
 category: Projects
 tags: julia, nastran
-type: 
-image: 
 status: published
 
 I have been working on a Nastran op4 file reader in Julia for a while in my spare time. The idea is to use it in my research on model-order reduction that I'm implementing in Julia.

@@ -4,19 +4,23 @@ var isClicked = false;
 var isPopstate = false;
 
 // Create class linkState to save for html history and fill it with dummy data
-var linkState = {item: whichPageActive, url: window.location.href};
+var linkState = { item: whichPageActive, url: window.location.href };
 
 // If no history event defined do this
-if (typeof(history.replaceState) !== "undefined") {
+if (typeof history.replaceState !== "undefined") {
   // Fill the linkState class
   linkState.item = whichPageActive;
   linkState.url = window.location.href;
 
   // Create the history event
-  history.replaceState({
-    item: linkState.item,
-    url: linkState.url
-  }, null, null);
+  history.replaceState(
+    {
+      item: linkState.item,
+      url: linkState.url,
+    },
+    null,
+    null
+  );
 }
 
 // Set linkState (usually and update after internal link click)
@@ -26,43 +30,49 @@ function setLinkState(linkItem, menuUrl) {
 }
 
 function doPushState(linkItem, menuUrl, poper) {
-  var state = {item: linkItem, url: menuUrl},
-  title = "",
-  path  = menuUrl;
+  var state = { item: linkItem, url: menuUrl },
+    title = "",
+    path = menuUrl;
 
   if (whichPageActive != linkItem) {
     animatePage(linkItem);
-    //hljs.initHighlightingOnLoad();
-    //MathJax.Hub.Typeset();
-    //fixPreWidth();
-
   } else {
     // A special function for the archives submenu, so that the menu itself is not reloaded
-    if (pages[whichPageActive-1] == "archives") {
-      $("#ajax_content_" + pages[linkItem-1] + " .ajax-fade").css({
-        "opacity": 0,
-        //"transform": "translateZ(0) rotateX(75deg)", // HW acceleration
-        //"transform-origin": "50% bottom",
-        "transition": "all " + 100 + "ms"
-      });
+    if (pages[whichPageActive - 1] == "archives") {
+      const query = document.querySelector(
+        "#ajax_content_" + pages[linkItem - 1] + " .ajax-fade"
+      );
+      query.opacity = 0;
+      query.transition = "all " + 100 + "ms";
     } else {
-      $("#ajax_content_" + pages[linkItem-1]).css({
-        "opacity": 0,
-        "transform": "translateZ(0)", // HW acceleration
-        "transition": "all " + animationPageDuration + "ms"
-      });
+      const query = document.querySelector(
+        "#page_" + pages[linkItem - 1] + " .ajax_content"
+      );
+      query.opacity = 0;
+      query.transform = "translateZ(0)";
+      query.transition = "all " + animationPageDuration + "ms";
     }
-    setTimeout(function(){
-      $("#page_" + pages[linkItem-1]).load(path + " .ajaxHook", function() {
 
-        document.querySelectorAll('pre code').forEach((block) => {
-          hljs.highlightBlock(block);
+    fetch(path)
+      .then((response) => {
+        return response.text();
+      })
+      .then((body) => {
+        const parsed = new DOMParser().parseFromString(body, "text/html");
+        document.querySelector("#page_" + pages[linkItem - 1]).innerHTML =
+          parsed.querySelector(".ajaxHook").outerHTML;
+
+        document.querySelectorAll("pre code").forEach((block) => {
+          hljs.highlightElement(block);
+        });
+
+        document.querySelectorAll("p code").forEach((block) => {
+          hljs.highlightElement(block);
         });
 
         MathJax.Hub.Typeset();
-        $(window).scrollTop(0);
+        //$(window).scrollTop(0);
       });
-    }, 100);
   }
 
   // If a real link event, update history
@@ -78,47 +88,23 @@ function doPushState(linkItem, menuUrl, poper) {
 // If support for pushState exist
 if (window.history && history.pushState) {
   // If click on menu link
-  $("#nav").on("click", "a", function(e) {
-    // Prevent default action
-    e.preventDefault();
+  document.querySelector("#nav").addEventListener("click", (e) => {
+    if (e.target && !!e.target.closest("A")) {
+      const link = e.target.closest("A");
 
-    // If no nearby previous event has been fired
-    if (isClicked == false) {
-      // Create variables to save
-      var linkItem = whichPageActive;
-      for (var i = 1; i <= pages.length; i++) {
-        if ($(this).attr("title") == pages[i-1]) {
-          linkItem = i;
-        }
-      }
-      var menuUrl = $(this).attr("href");
-
-      // Perform the loading and update history
-      doPushState(linkItem, menuUrl, false);
-
-      // Change clicked event
-      isClicked = true;
-
-      // Set the timeout
-      setTimeout(function(){
-        isClicked = false;
-      }, animationPageDuration);
-    }
-  });
-
-  // If click on link in main body
-  $("#main").on('click', 'a', function(e) {
-    if ($(this).attr("target") == "_blank") {
-      // Do nothing for external links
-    } else {
-      // Prevent default action if internal link
+      // Prevent default action
       e.preventDefault();
 
       // If no nearby previous event has been fired
       if (isClicked == false) {
         // Create variables to save
         var linkItem = whichPageActive;
-        var menuUrl = $(this).attr("href");
+        for (var i = 1; i <= pages.length; i++) {
+          if (link.title == pages[i - 1]) {
+            linkItem = i;
+          }
+        }
+        var menuUrl = link.attributes.href.nodeValue;
 
         // Perform the loading and update history
         doPushState(linkItem, menuUrl, false);
@@ -127,21 +113,58 @@ if (window.history && history.pushState) {
         isClicked = true;
 
         // Set the timeout
-        setTimeout(function(){
+        setTimeout(function () {
           isClicked = false;
         }, animationPageDuration);
+      }
+    }
+  });
+
+  // If click on link in main body
+  document.querySelector("#main").addEventListener("click", (e) => {
+    if (e.target && !!e.target.closest("A")) {
+      const link = e.target.closest("A");
+      if (link.target == "_blank") {
+        // Do nothing for external links
+      } else if (link.attributes.href.nodeValue[0] == "#") {
+        // Do nothing for hash links
+      } else {
+        // Prevent default action if internal link
+        e.preventDefault();
+
+        // If no nearby previous event has been fired
+        if (isClicked == false) {
+          // Create variables to save
+          var linkItem = whichPageActive;
+          var menuUrl = link.attributes.href.nodeValue;
+
+          // Perform the loading and update history
+          doPushState(linkItem, menuUrl, false);
+
+          // Change clicked event
+          isClicked = true;
+
+          // Set the timeout
+          setTimeout(function () {
+            isClicked = false;
+          }, animationPageDuration);
+        }
       }
     }
   });
 }
 
 // If a history event is fired
-$(window).on('popstate', function(e) {
+window.addEventListener("popstate", (e) => {
   // Get the previous state
-  var state = e.originalEvent.state;
+  console.log(e);
+  const state = e.state;
 
+  if (!state) {
+    // No previous state
+  }
   // If no nearby previous event has been fired
-  if (isPopstate == false) {
+  else if (isPopstate == false) {
     // Perform the loading and update history
     doPushState(state.item, state.url, true);
 
@@ -149,7 +172,7 @@ $(window).on('popstate', function(e) {
     isPopstate = true;
 
     // Set the timeout
-    popstateTimeout = setTimeout(function(){
+    popstateTimeout = setTimeout(function () {
       isPopstate = false;
     }, animationPageDuration);
   } else {
@@ -164,8 +187,10 @@ $(window).on('popstate', function(e) {
     clearTimeout(animationTimeout);
 
     // These functions are in timeout and need to be run now when timeout is canceled
-    $(hidePages).css({"display": "none"});
-    $("html").removeClass("hide_scroll");
+    document
+      .querySelectorAll(hidePages)
+      .forEach((el) => (el.style.display = "none"));
+    document.querySelector("html").classList.remove("hide_scroll");
   }
 });
 // End Navigation.js

@@ -4,9 +4,6 @@ modified:
 author: Mladen Gibanica
 category: Projects
 tags: python, react, sanic, Raspberry Pi, camera
-type:
-image:
-data:
 status: published
 
 *In progress:*
@@ -15,6 +12,8 @@ status: published
 moko consists of a <a href="https://github.com/mgcth/moko_server" target="_blank">server</a> and a <a href="https://github.com/mgcth/moko_client" target="_blank">client</a>.
 The server runs on the hardware hosting the camera in question, so far the server only supports Raspberry Pi cameras, and starts a server you can expose to the world wide web.
 The client can be run anywhere, as long as it can connect to the server, from which the camera can be configured and a live view seen.
+The client can, for example, be accessed from this address: <a href="https://moko.linearspan.com/" target="_blank">https://moko.linearspan.com/</a>.
+That site is just a Cloudflare Pages hosted version of the <a href="https://github.com/mgcth/moko_client" target="_blank">moko client</a> repo.
 In the spirit of simplicity, only JPEGs are streamed, so expect a rather low quality feed.
 Authentication is handled through JWT.
 
