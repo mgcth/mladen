@@ -616,6 +616,9 @@ article .article-content .article_body>h6 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    max-width: 1000px;
+    max-height: 1000px;
+    margin: 0 auto;
 }
 
 /* Lists */
