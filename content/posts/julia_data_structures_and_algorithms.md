@@ -5,7 +5,7 @@ category: Projects
 tags: data structures, algorithms, julia
 status: published
 
-<a href="https://github.com/mgcth/DataStructuresAlgorithms.jl" target="_blank">DataStructuresAlgorithms.jl</a>; my implementation of some basic data structures and algorithms in Julia, mainly for my understanding.
+<a href="https://github.com/mgcth/DataStructuresAlgorithms.jl" target="_blank">DataStructuresAlgorithms.jl</a>; my implementation of some basic data structures and algorithms in Julia, mainly as an exercise.
 
 This package can be installed as
 ```julia-repl
