@@ -20,5 +20,6 @@
         "fenced_code",
         "mdx_math"
     ],
-    "s3-bucket": "mladen"
+    "s3-bucket": "mladen",
+    "mangle_image_name": true
 }

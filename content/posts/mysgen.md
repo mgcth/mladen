@@ -1,4 +1,4 @@
-title: mysgn
+title: mysgen
 date: 2020-01-11
 author: Mladen Gibanica
 category: Projects
