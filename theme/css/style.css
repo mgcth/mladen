@@ -350,11 +350,7 @@ body {
     height: 50px;
     background: rgba(250, 250, 250, 0.75);
     backdrop-filter: blur(5px);
-}
-
-.footer details {
-    display: flex;
-    flex-direction: row-reverse;
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .footer details summary {
