@@ -352,8 +352,8 @@ body {
     padding: 0;
     height: 50px;
     background: rgba(250, 250, 250, 0.75);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
 }
 
 .footer details summary {
