@@ -18,9 +18,3 @@ You can find my publicly available work on
 This is my personal website with posts related to research,
 <a href="https://mladen.gibanica.net/projects/">projects</a> and other interests.
 I occasionally take <a href="https://mladen.gibanica.net/photos/">photos</a>, too.
-
-This site was generated with
-<a href="https://github.com/mgcth/mysgen" target="_blank">mysgen</a>,
-a simple static-site generator.
-Content on this site is under copyright, if not stated otherwise.
-Last updated {{update_date}}.
