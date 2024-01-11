@@ -352,8 +352,8 @@ body {
     padding: 0;
     height: 50px;
     background: rgba(250, 250, 250, 0.75);
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .footer details summary {
@@ -698,9 +698,9 @@ article .article-content .article_body>h6 {
     right: 0;
     bottom: 0;
     padding: 90px;
-    background: rgba(250, 250, 250, 0.85);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(250, 250, 250, 0.75);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
 }
 
 .lightbox span {
