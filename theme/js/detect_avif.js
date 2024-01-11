@@ -5,7 +5,7 @@ AVIF.onload = function () {
 };
 AVIF.onerror = function () {
   document.getElementById("avif-element").classList.add("avif-false")
-  document.getElementById("avif-element").setAttribute("title", "No support for AVIF format, pictures won't show.")
+  document.getElementById("avif-element").setAttribute("title", "No support for the AVIF format, pictures won't show.")
 };
 AVIF.src =
   "data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f8D///8WfhwB8+ErK42A=";
@@ -17,7 +17,7 @@ if (P3 === false) {
   document.getElementById("color-p3").classList.add("color-false-p3")
   document.getElementById("color-srgb").classList.add("color-false-p3")
 
-  document.getElementById("color-gamut").setAttribute("title", "No support for P3 color space, colours will look wrong.")
+  document.getElementById("color-gamut").setAttribute("title", "No support for the P3 color space, colours will look wrong.")
 } else {
   document.getElementById("color-gamut").setAttribute("title", "Your browser supports the P3 color space!")
 }
