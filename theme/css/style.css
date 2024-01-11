@@ -378,15 +378,29 @@ body {
     align-items: center;
     height: 50px;
     position: relative;
-    padding: 0 20px;
-}
-
-.footer li:first-child {
     padding: 0 20px 0 0;
 }
 
-.footer li:last-child {
-    padding: 0 20px 0 0;
+#avif-element {
+    padding: 0 2px;
+}
+
+.avif-true {
+    background: rgba(0, 255, 0, 0.25);
+}
+
+.avif-false {
+    background: rgba(255, 0, 0, 0.25);
+}
+
+.color-green-srgb {
+    background-color: rgba(0, 255, 0, 0.25);
+    padding: 0 2px;
+}
+
+.color-green-p3 {
+    background-color: color(display-p3 0 1 0 / 0.25);
+    padding: 0 2px;
 }
 /* End Footer */
 
