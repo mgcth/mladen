@@ -18,7 +18,7 @@
                                             <img class="post-image-tile" src="/{{ meta.path }}/images/{{image}}"/>
                                         </a>
                                         <a href="#" id="{{ image }}" class="lightbox">
-                                            <span style="background-image: url('/{{ meta.path }}/images/{{ meta.image_paths[loop.index0] }}')"></span>
+                                            <span style="background-image: url('/{{ meta.path }}/images/{{ meta.image_paths[loop.revindex0] }}')"></span>
                                         </a>
                                     </li>
                                     {% endfor %}
