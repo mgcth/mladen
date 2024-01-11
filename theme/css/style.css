@@ -339,14 +339,15 @@ body {
 
 /* Footer */
 #footer {
-    position: fixed;
-    text-transform: uppercase;
-    z-index: 1;
     bottom: 40px;
     right: calc(50% - 430px);
+    position: fixed;
+    z-index: 1;
+    text-transform: uppercase;
+    z-index: 1;
     /*530px*/
     margin: 0;
-    padding: 0 20px;
+    padding: 0;
     height: 50px;
     background: rgba(250, 250, 250, 0.75);
     backdrop-filter: blur(5px);
@@ -359,6 +360,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding: 0 0 0 20px;
 }
 
 .footer ul {
@@ -367,6 +369,7 @@ body {
     text-align: center;
     list-style: none;
     display: flex;
+    flex-direction: row-reverse;
 }
 
 .footer li {
@@ -375,6 +378,14 @@ body {
     height: 50px;
     position: relative;
     padding: 0 20px 0 0;
+}
+
+.footer li:first-child {
+    padding: 0;
+}
+
+.footer li:last-child {
+    padding: 0 20px;
 }
 
 #avif-element {
@@ -871,6 +882,10 @@ code[class*="language-"] {
         left: 40px;
     }
 
+    #footer {
+        right: 40px;
+    }
+
     .main ol {
         max-width: calc(100% - 80px);
     }
@@ -903,6 +918,24 @@ code[class*="language-"] {
     .nav #menu-icon {
         height: 45px;
         padding: 0 15px;
+    }
+
+    #footer {
+        bottom: 20px;
+        left: 20px;
+        font-size: 87.5%;
+    }
+
+    .footer details summary {
+        padding: 0 0 0 10px;
+    }
+    
+    .footer li {
+        padding: 0 10px 0 0;
+    }
+    
+    .footer li:last-child {
+        padding: 0 10px;
     }
 
     .main .page {
@@ -1038,6 +1071,12 @@ code[class*="language-"] {
     .nav #menu-icon {
         height: 40px;
         padding: 0 10px;
+    }
+
+    #footer {
+        bottom: 10px;
+        left: 10px;
+        font-size: 85.71%;
     }
 
     .main .page {
