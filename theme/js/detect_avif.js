@@ -17,7 +17,7 @@ if (P3 === false) {
   document.getElementById("color-p3").classList.add("color-false-p3")
   document.getElementById("color-srgb").classList.add("color-false-p3")
 
-  document.getElementById("color-gamut").setAttribute("title", "No support for P3 color space, pictures will look oversaturated.")
+  document.getElementById("color-gamut").setAttribute("title", "No support for P3 color space, colours will look wrong.")
 } else {
   document.getElementById("color-gamut").setAttribute("title", "Your browser supports the P3 color space!")
 }
