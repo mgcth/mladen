@@ -157,7 +157,6 @@ if (window.history && history.pushState) {
 // If a history event is fired
 window.addEventListener("popstate", (e) => {
   // Get the previous state
-  console.log(e);
   const state = e.state;
 
   if (!state) {
