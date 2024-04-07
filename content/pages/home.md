@@ -4,7 +4,7 @@ author: Mladen Gibanica
 type: index
 status: published
 
-<h2 style="margin: 40px 0; font-weight: 400;">Hi! My name is Mladen Gibanica.</h2>
+<h4 style="margin: 20px 0; font-weight: 400;">Hi! My name is Mladen Gibanica.</h4>
 
 I am a Senior Data Scientist at eghed and founding member of
 <a href="https://github.com/Ingenjorsarbete-For-Klimatet" target="_blank">Ingenjörsarbete för Klimatet (IFK)</a>.
