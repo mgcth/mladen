@@ -124,7 +124,7 @@ h5,
 h6 {
     margin: 10px 0;
     letter-spacing: 0.1em;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h1 {
@@ -213,9 +213,9 @@ body {
     margin: 0;
     padding: 0;
     color: #000;
-    font-family: "Lato", sans-serif;
+    font-family: "Source Sans 3", sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* End HTML and BODY */
@@ -258,6 +258,7 @@ body {
     height: 50px;
     padding: 0 20px;
     background: rgba(240, 240, 240, 0.75);
+    letter-spacing: 0.1em;
 }
 
 .nav a:hover {
@@ -356,8 +357,12 @@ body {
     -webkit-backdrop-filter: blur(5px);
 }
 
+.footer details {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .footer details summary {
-    float: right;
     height: 50px;
     display: flex;
     align-items: center;
@@ -458,7 +463,7 @@ body {
 
 .main .content {
     margin: 0;
-    padding: 0;
+    padding: 0 0 10px 0;
     /*perspective: 150px;
     perspective-origin: 50% bottom;*/
 }
@@ -551,7 +556,7 @@ body {
 
 .main p {
     font-size: 1.4em;
-    line-height: 1.5em;
+    line-height: 1.75em;
     text-align: justify;
     margin: 0;
     padding: 10px 0;
@@ -875,11 +880,11 @@ dl dd[data-list]::after {
 /* highlight.js */
 .hljs {
     background: rgba(245,242,240,0.8) !important;
-    font-family: "Inconsolata", monospace !important;
+    font-family: "Source Code Pro", monospace !important;
 }
 
 code[class*="language-"] {
-    font-family: "Inconsolata", monospace !important;
+    font-family: "Source Code Pro", monospace !important;
     white-space: pre-wrap;
 }
 
@@ -946,12 +951,12 @@ code[class*="language-"] {
 
     #footer {
         bottom: 20px;
-        left: 20px;
+        right: 20px;
         font-size: 87.5%;
     }
 
     .footer details summary {
-        padding: 0 0 0 10px;
+        padding: 0 10px;
     }
     
     .footer li {
@@ -1077,8 +1082,8 @@ code[class*="language-"] {
     }
 
     #nav {
-        top: 10px;
-        left: 10px;
+        top: 15px;
+        left: 15px;
         font-size: 87.5%;
     }
 
@@ -1098,8 +1103,8 @@ code[class*="language-"] {
     }
 
     #footer {
-        bottom: 10px;
-        left: 10px;
+        bottom: 15px;
+        right: 15px;
         font-size: 85.71%;
     }
 
@@ -1123,15 +1128,15 @@ code[class*="language-"] {
     }
 
     .main .entry-content {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     .main .entry-content-page {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     .main .entry-content-page-title {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     .main p {
@@ -1164,11 +1169,11 @@ code[class*="language-"] {
     }
 
     .main article header {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     article .article-content>.article_body {
-        padding: 10px;
+        padding: 10px 15px;
     }
 
     article .article-content .article_body>h2,
@@ -1188,11 +1193,11 @@ code[class*="language-"] {
     }
 
     ul.unordered-list li[data-list]::after {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     dl dt {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     dl dd[data-list]::after {
